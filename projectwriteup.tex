@@ -1,0 +1,420 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,graphicx}
+\usepackage{color}
+\usepackage{hhline}
+
+\newcommand{\expon}[1]{e^{#1}}
+\newcommand{\e}[1]{\times 10^{#1}}
+\newcommand{\pop}{(\textcolor{red}{\textbf{?}})}
+\newcommand{\tableend}{\\}
+
+\title{A Wideband Self-Consistent Disk-Averaged Spectrum of Jupiter Near 30 GHz and Its Implications for NH3 Saturation in the Upper Troposphere}
+\date{\today}
+\author{Ramsey Karim, David deBoer, Imke de Pater, Garrett Keating}
+
+\begin{document}
+
+\maketitle
+\abstract{
+	We present a new set of CARMA measurements of Jupiter's thermal emission in the microwave, near the 1.3 cm ammonia (NH3) absorption band, and a subsequent re-analysis of ammonia abundance in the upper troposphere, near $0.3<P<2$ bar, based on radiative transfer modeling.
+	Upon investigation, we find ammonia to be present at over half the nominal value below the $P\sim 0.8$ bar NH3 cloud layer, corresponding to a new deep ($P \sim 8$ bar) atmosphere fractional abundance of $2.4\e{-4}$.
+	This conclusion is not extended past $P = 8$ bar, since our measurements have no sensitivity and the result would contradict Galileo probe results.
+	We find the NH3 cloud-forming region between $0.3 < P < 0.8$ bar to be globally subsaturated by 55\% on average, in accordance with the result in Gibson et al. 2005.
+	While these data are not very sensitive to the region above the cloud layer, we are able to set an upper limit of $2.4\e{-7}$ on the abudance here, although both our fitting process and the Clausius-Clapeyron equation of state suggest something closer to $\sim 2\e{-8}$.
+	All three results agree that NH3 abundance is a factor of 2 lower than suggested by Galileo probe results above $P < 2$ bar, a conclusion consistent with the Gibson et al. 2005 result as well as the ground-based radio models discussed in de Pater et al. 2001.
+}
+
+\section{Introduction}
+
+	Microwave observations of Jupiter's atmosphere are generally dominated by pressure-broadened spectral features of ammonia gas in the troposphere.
+	The most notable feature in this region of the gas giant's thermal spectrum is the 1.3 cm NH3 inversion/absorption band, first reported as a single, broad line by Law and Staelin 1968 and declared by Klein and Gulkis 1978 to be a ``diagnostic of the pressure and temperature profiles in the cloud-forming region of the Jovian atmosphere.''
+	As we continue to sample Jupiter's thermal spectrum around this band, we can better characterize the shape of this spectral feature, which, through proper analysis, provides us with a deeper understanding of the planet's vertical structure and improves Jupiter's usefulness as a radio calibrator.	
+
+	Decades of disk-averaged, and more recently, spatially resolved, observations as well as in situ probe measurements have contributed to this understanding.
+	Ammonia's presence in the jovian atmosphere was first noted by Wildt 1937 using evidence in the visible spectrum.
+	After the first detection of radio emission from Jupiter by Burke and Franklin 1955, a number of projects in the 1950s-60s endeavored to explore the radio spectrum of the planet and generate a consistent thermochemical model for its atmosphere (e.g., Alsop and Giordmaine 1961, Thornton and Welch 1963, Kalaghan and Wulfsberg 1968).
+	Thermochemical and radiative transfer analyses like these rely on laboratory-based experimental data describing the behavior of relevant spectral features under typical jovian conditions; many efforts have been made to characterize NH3 lines in this way, including thorough investigations by Townes and Schawlow 1955 and Poynter and Kakar 1975.
+	This mid-to-late 20th century investigation of the gas giant's microwave spectrum suggested a relatively straightforward model involving an adiabatic atmosphere with roughly solar NH3 abundance in the deep atmosphere, considered to be well-mixed, until depletion by condensation following the saturated vapor curve.
+
+	Modern efforts to uncover more about the planet's vertical structure have also raised new questions (de Pater et al. 2005).
+	The Galileo probe mission of the 1990s presented in situ measurements of NH3 abundance that arguably conflict with ground-based radio observational models, creating what de Pater et al. 2001 calls the ``Galileo -- Ground-based Microwave Paradox.''
+	Probe measurements, reduced in Folkner et al. 1998 at Sromovsky et al. 1998, suggest even after reexamination of calibration in Wong et al. 2004 that the NH3 abundance should be nearly $4 \times$ solar
+	\footnote{We designate a solar model based on the most recent proto-solar elemental abundance estimates (Asplund et al. 2009). N/H2 is taken to be $1.48 \e{-4}$. Henceforth, the solar NH3 abundance value is $1.28 \e{-4}$.}
+	and should deplete at a number of clouds at $P<8$ bar.
+	Given the previously accepted model, this result was jarring.
+	The paradox demands further investigation in both observational categories.
+
+	This work focuses on the ground-based and disk-averaged case and attempts to fine-tune the model referred to by de Pater et al. 2001 as the ``Radio Model'' of NH3 abundance based on this type of observation.
+	Contemporary microwave observations include the 20-24 GHz cluster by Klein and Gulkis 1978 and the 20-90 GHz span of 5 measurements made using the Wilkinson Microwave Anisotropy Probe (WMAP) presented in Page et al. 2003 and updated in Weiland et al. 2011.
+	Gibson et al. 2003 provides a single, well-calibrated point at 28.5 GHz while Gibson et al. 2005 (henceforth JG) corrects and discusses all three of these sets, concluding that NH3 is globally subsolar between $0.6 < P < 2$ bar and subsaturated by more than 50\% between $0.4 < P < 0.6$ bar.
+	Measurements presented more recently by de Pater et al. 2016 fill in the lower-frequency side, from about 5 to 20 GHz.
+
+	de Pater et al. 2016 applies a model that takes NH3 abundance to be $4.5 \times$ solar ($5.72 \e{-4}$) in the deep atmosphere, inspired by the Galileo results, and then follows the saturated vapor curve during and above the cloud layers.
+	Abundance in this model is reduced appropriately at the solution (water and NH3) and NH4SH clouds in addition to the NH3 cloud. This model (henceforth the ``nominal'' model) represents well the data gathered so far.
+	Each of the contemporary measurements contributes heavily to this model and our understanding of the planet's vertical structure; the multi-measurement sets paint the general line shape in broad strokes across tens of GHz, while the Gibson et al. 2003 point confidently pins down an absolute brightness temperature.
+	What is not seen yet in the spectrum is a tightly packed cluster of self-consistent measurements indicating a local spectral slope.
+	We wish to present this missing piece with our contribution of 15 thermal brightness measurements spanning 27-35 GHz, a short frequency regime relative to the decades spanned by extant sets.
+	Now, with a broad line shape, a highly calibrated point, and a local slope, the accuracy of the resulting Radio Model should greatly improve.
+
+\section{Data}
+
+	One of the last studies conducted with the Combined Array for Research in Millimeter-wave Astronomy (CARMA) was a CO power spectrum survey which aimed to measure the CO(1-0) transition in redshift $\sim 3$ galxies (Keating et al. 2015; Keating et al. 2016, hereafter referred to as COPSS).
+	The compact, 8-element Sunyaev-Zel'dovich Array (SZA) subset of CARMA was used to take various field scans between 27-35 GHz, where such a redshifted $\lambda_{0} = 115$ GHz line would lie.
+	COPSS used Mars as the primary calibrator, but recorded secondary calibration scans of Jupiter for redundancy.
+	It is these observations, taken between December 2014 and the array's decommission in April 2015, that are used in this work.
+
+	The SZA is a set of eight 3.5 m elements sensitive to left circularly polarized radiation.
+	Since it does not resolve the planet, the synthesized beam from this array is sufficient for measurements of Jupiter's total flux density.
+	All further analysis is thus restricted to the case of the atmosphere averaged across the projected observable surface of the planet at the time of the observation, which, when averaged over time, presents a reasonable disk-averaged measurement of the planet's flux density.
+	The calibration data from COPSS comprise flux densities spanning 15 channels from 27-35 GHz (0.8 to 1.1 cm) and 100 days between December 2014 and April 2015.
+	Error estimates accompanying the data have typical values of $\sim0.01$ Jy and account only for thermal error.
+	Uncertainty in the absolute flux calibration is preliminarily estimated at $<5\%$ according to COPSS, but we present our own thorough investigation in Section \ref{s:error}.
+	CARMA in its entirety is a fairly spectrally stable instrument, so we expect relative uncertainty to be somewhat smaller than absolute uncertainty; this too will be discussed shortly.
+
+\subsection{Flux Measurement Reduction}
+
+	Reduction of these data, for each channel, converts a time series of flux densities to a single brightness temperature.
+	The process also isolates and corrects for a variety of systematics throughout the process.
+	The result is 15 time- and disk-averaged measurements of Jupiter's brightness on the short wave side of the 1.3 cm ammonia absorption band.
+
+	The effects of Jupiter's distance from Earth during the observational period are removed through distance normalization to the nominal value of 4.04 AU, ``flattening'' each channel's measurement as is made evident between the two panels in Figure \ref{fig:raw}.
+	This step facilitates examination of antenna gain error, indicated by the variance in the normalized points as well as the cross-channel behavior during individual observations.
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{final_raw.png}
+		\caption{\label{fig:raw}Flux density measurements by time, before and after distance adjustment.}
+	\end{figure}
+	Jackknife testing, discussed in more detail in Section \ref{s:jackknife}, reveals an additional artifact at this stage.
+	The series of flux densities for each channel show positive linear correlation with Jupiter's elevation in the sky at the time of observation, indicating some potential issue with airmass calibration in the original measurements.
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{final_airmass.png}
+		\caption{\label{fig:air}Indication of linear dependence of flux on elevation, and more importantly, linear dependence of flux-elevation slope on frequency.}
+	\end{figure}
+	The slopes of each channel's correlation are positive linear by frequency and therefore simple to normalize out, as demonstrated in Figure \ref{fig:air}, assuming that the measurements taken at higher elevations through thinner layers of atmosphere are more accurate.
+
+	% Averaging
+	The flux densities are averaged across time with weights corresponding inversely to the thermal error on each measurement.
+	Averages are calculated as
+	$$F_{\nu,\,meas} = \langle F_{\nu} \rangle = \frac{ \sum_{i} w_{\nu, i} F_{\nu,i} }{ \sum_{i} w_{\nu, i} }$$
+	where $$w_{\nu, i} = 1/\sigma_{\nu, i}^{2}$$
+	such that $\sigma_{\nu, i}$ is the stated thermal error in janskys on the $i$th measurement for a given channel.
+	Averaging the flux densities themselves is fairly straightforward; the rest of this section will discuss the application
+	of meaningful error estimates.
+
+\subsubsection{Absolute ($\sigma_{A}$) and Relative ($\sigma_{R}$) Uncertainty} \label{s:error}
+	We define two distinct error measurements for the data set: absolute uncertainty $\sigma_{A}$ and relative uncertainty $\sigma_{R}$.
+	Absolute uncertainty will quantify our estimate of the calibration accuracy of the SZA and lends the entire enseble of resulting points a potential vertical offset.
+	The $\sigma_{A}$ measurement cannot wildly upset the relationship between points within this set; it is primarily a characteristic of the ensemble as a whole.
+	From COPSS, we quote an estimated upper limit of $<5\%$ on this calibration error.
+
+	Meanwhile, relative uncertainty quantifies the stability of each channel with respect to the others, estimating internal consistency rather than absolute accuracy.
+	We know CARMA to exhibit strong spectral stability and can observe this feature in the strongly correlated cross-channel behavior displayed in Figures \ref{fig:raw} and \ref{fig:air}, which suggests that the $\sigma_{R}$ measurement, while allowing some independent uncertainty on points, is expected to be smaller than $\sigma_{A}$ and so will not have as great an effect on the overall position of the ensemble.
+	$\sigma_{R}$ is useful in defending the use of the relative structure of the ensemble as a comparably reliable tool to the absolute position as well as quantifying a model's match to this relative structure during the model-comparison process.
+	$\sigma_{A}$, by contrast, serves as a more conventional uncertainty estimate.
+
+	Each final temperature measurement carries its own $\sigma_{A}$ estimate, calculated independently of the other channels.
+	These individual absolute uncertainties may be taken as conventional, independent uncertainties, a choice justified by their universally larger size than the relative uncertainties.
+	Alternatively, one may use the relative uncertainties as conventional error.
+	Considering that the absolute uncertainties are all approximately equal and should apply to the ensemble as a whole, it would not be inappropriate to average them and take them as a single property of this ensemble.
+	This second option, while slightly unwieldy, preserves more of the information contained in this set.
+
+	We approach the absolute uncertainty $\sigma_{A}$ estimate using statistical properties of the flux density ensemble along with their stated thermal errors.
+	The statistical contribution $\hat{\sigma}$ dwarfs the thermal contribution $\hat{n}$, but is included for the sake of rigor.
+	$$\sigma_{A}(\hat{\sigma}, \hat{n}) = \hat{\sigma}^{2} + \hat{n}^{2}$$
+	Thermal contribution $\hat{n}$ is calculated as the reciprocal sum of thermal uncertainties for a given channel.
+	With $w_{i}$ defined above, $\hat{n}$ is defined
+	$$ \frac{1}{\hat{n}^{2}} = \sum_{i} w_{i} $$
+	Statistical contribution $\hat{\sigma}$, dominating this absolute uncertainty estimate, is calculated as a weighted standard deviation, given $w_{i}$ as well as the series fluxes $F_{\nu,i}$ and the channel average $\langle F_{\nu} \rangle$.
+	$$\hat{\sigma}^{2} = \frac{\sum_{i} w_{i} \big( F_{\nu,i} - \langle F_{\nu} \rangle \big)^{2} }{\sum_{i} w_{i}}$$
+	In this way, we merge statistical 1-sigma error on a channel's flux ensemble with the thermal uncertainty of the points themselves and produce the value $\sigma_{A}$, our estimate of uncertainty on the absolute calibration of the instrument.
+	This we find to be closer to $\sim2\%$, which falls comfortably under the upper limit stated by COPSS.
+
+	Relatice uncertainty $\sigma_{R}$ comprises both thermal contribution as well as the tendency of each channel to deviate from the others.
+	A perfectly stable instrument should exhibit a consistent cross-channel reaction to small, day-to-day variation in observed flux; unexpected behavior should be reflected in $\sigma_{R}$.
+	We compare observations across channels by normalizing each channel with its average.\footnote{Until now, all averages have been across time, isolated to each channel.
+	In this section, that will no longer be the case, so averages will be marked as either channel averages ($\nu$) summed across all observations as before, or ``daily'' averages ($i$) calculated with sums across all channels, isolated to each observation.}
+	The normalized measurements are denoted $f_{\nu, i}$.
+	$$ f_{\nu, i} = \frac{F_{\nu, i}}{\langle F_{\nu, i} \rangle_{\nu}} $$
+	This fraction is averaged across each observation to find the daily mean deviation from each channel's respective average.
+	A stable instrument's channels would exhibit minimal spread around this daily mean deviation, and any spread should be uncorrelated with channel.
+	We isolate the residuals $\delta_{\nu, i}$ from this daily average by subtracting the daily mean deviation from each observation set of normalized measurements, so as to excuse the daily deviation itself but examine each channel's deviation from this deviation.
+	These residuals are defractionalized by multiplying by the channel average.
+	$$ \delta_{\nu, i} = (f_{\nu, i} - \langle f_{\nu, i} \rangle_{i}) \cdot \langle F_{\nu, i} \rangle_{\nu} $$
+	Each channel's behavior is now quantified by its mean deviation from the daily average as well as the spread of these deviations, given by their variance across each channel.
+	During this examination, it was noted that the channels had a tendency to vary together; they often would pivot around the 31.188 GHz measurement, which remained stable to within $0.5$\% of the measurement value.
+	The frequencies at either extreme (27.688 GHz and 34.688 GHz) varied by no more than 6\%.
+	It is unclear what causes this linear variation, but it is worth mentioning that even though this estimate aims to describe the uncertainty of these points relative to each other, it is an overestimate.
+	There remains some unidentifiable dependency between the channels.
+
+	We introduce a thermal component as well, calculated by fractionalizing each thermal error by its accompanying measurement, averaging across each channel, and denormalizing with the channel average.
+	$$\sigma_{th} = \Bigg\langle \frac{\sigma_{i}}{F_{\nu,i}} \Bigg\rangle_{\nu} \langle F_{\nu, i} \rangle_{\nu} $$
+
+	The final relative uncertainty measurement contains these three values.
+	The third term, the variance of the channel's daily deviations, dominates the entire measurement and gives each channel a relative uncertainty on the order of a jansky.
+	$$ \sigma_{R}^{2} = \sigma_{th}^{2} + \langle \delta_{\nu, i} \rangle_{\nu}^{2}
+		 + \Big\langle (\delta_{\nu, i} - \langle \delta_{\nu, i} \rangle_{\nu})^{2} \Big\rangle_{\nu} $$
+
+
+\subsubsection{Synchrotron Removal}
+	Correction for synchrotron contribution to the centimeter-wave spectrum is added to the flux density measurements following a model described in JG.
+	Jupiter's dynamic synchrotron spectrum has been a subject of discussion since the 1970s when a series of observations suggested time variability in the low-frequency\footnote{Klein 1976 uses 11-13 cm and 21 cm, considerably longer wavelengths than our 1 cm.} spectrum (Klein 1976).
+	A survey of that spectrum from 74 MHz up to 8 GHz, described in de Pater et al. 2003, suggests that synchrotron contribution to the planet's radio spectrum drops off above 2 GHz, so we believe that, with frequencies around 30 GHz, our measurements are fairly safe from significant synchrotron-induced variability.
+	Additionally, Klein 1976 observes that fluctuations on the order of days did not exceed 10\%, and explores several-year variability with 1-3 month averages, implying that our 5-month average should capture an approximately constant period of synchrotron variability.
+	Under this assumption, we use a simplified and time-independent model of synchrotron contribution to recover the thermal spectrum.
+	The correction is purely arithmetic and thus does not propagate into uncertainties.
+
+	JG uses a value of 1.5 Jy for the synchrotron contribution to a 28.5 GHz measurement of the thermal spectrum, based on work done by de Pater and Dunn 2003.
+	In order to adjust extant data in the same frequency regime, JG adopts a relationship of $F_{\nu,\,synch} \sim \nu^{-0.4}$, leading to the local model
+	$$F_{\nu,\,synch} =  (1.5 \ Jy)\Bigg(\frac{\nu}{28.5 \ GHz}\Bigg)^{-0.4}$$
+	We find this model acceptable across our small frequency domain, especially considering the comparability of the synchrotron contribution to the uncertainty estimates for these data.
+
+	The synchrotron model is subtracted from the time-averaged flux density at each channel, yielding thermal-only flux density measurements:
+	$$F_{\nu,\,thermal} = F_{\nu,\,meas} - F_{\nu,\,synch}$$
+
+
+\subsection{Conversion to Brightness Temperature and CMB Adjustment} % Neptune 2014 Imke
+	
+	Thermal radiation flux density $F_{\nu\,thermal}$ is converted to brightness temperature $T_b$ via the Planck function.
+	The resulting $T_{b,\,meas}$ from a direct conversion is not yet indicative of the true temperature of the emitter -- it is the contrast between the emitter and the microwave background.
+	Correction for this is made during conversion, following a similar adjustment made in de Pater et al. 2014.
+	Observed thermal flux density is set equal to a combination of thermal brightness temperature and CMB contribution by the Planck function, as below, allowing $T_{cmb} = 2.725$ K.
+	$$ F_{\nu} = \frac{2h\nu^3}{c^2}\Bigg( \frac{1}{\expon{\frac{h\nu}{kT_b}} - 1} - \frac{1}{\expon{\frac{h\nu}{kT_{cmb}}} - 1} \Bigg)
+		\frac{\pi R_{eq} R_{p}'}{D^2} $$
+	where apparent polar radius is given by $R_{p}' = \sqrt{R_{eq}^{2}\sin^{2}{\phi} + R_{p}^{2}\cos^{2}{\phi}}$.
+	Subearth latitude used here is $\phi = 0.15^{\circ}$, which is the average over a tight cluster of
+	small, similar $\phi$ values over the four month observation interval according to the JPL Horizons interface.
+
+	Working values at each major step as well as final measurements and associated errors are laid out in Table \ref{tab:1}.
+	The $T_b$ values, along with some combination of the $\sigma_{A}$ and $\sigma_{R}$ errors, are appropriate for reproduction in future work.
+
+
+	% TABLE !!
+	\begin{table}
+	\centering
+	\begin{tabular}{cc || c | c | c | c | c }
+	$f$ (GHz) & $\lambda$ (cm) & $F_{\nu,\,meas}$ (jy) & $F_{\nu,\,thermal}$ (jy) & $T_b$ (K) & $\sigma_{A}$ (K) & $\sigma_{R}$ (K) \\\hhline{==#=|=|=|=|=}
+	34.688 & 0.864 & 226.612 & 225.225 & 151.013 & 3.180 & 1.359 \tableend
+	34.188 & 0.877 & 219.250 & 217.855 & 150.385 & 3.143 & 1.186 \tableend
+	33.688 & 0.890 & 211.832 & 210.429 & 149.615 & 3.222 & 1.037 \tableend
+	33.188 & 0.903 & 206.006 & 204.594 & 149.876 & 2.531 & 1.244 \tableend
+	32.688 & 0.917 & 198.089 & 196.669 & 148.534 & 3.244 & 0.620 \tableend
+	32.188 & 0.931 & 191.047 & 189.618 & 147.707 & 3.228 & 0.510 \tableend
+	31.688 & 0.946 & 184.615 & 183.177 & 147.235 & 3.240 & 0.316 \tableend
+	31.188 & 0.961 & 178.155 & 176.708 & 146.635 & 3.293 & 0.146 \tableend
+	30.688 & 0.977 & 171.458 & 170.002 & 145.720 & 3.266 & 0.378 \tableend
+	30.188 & 0.993 & 165.546 & 164.080 & 145.347 & 3.382 & 0.395 \tableend
+	29.688 & 1.010 & 159.553 & 158.077 & 144.794 & 3.515 & 0.675 \tableend
+	29.188 & 1.027 & 153.335 & 151.849 & 143.911 & 3.584 & 0.769 \tableend
+	28.688 & 1.045 & 147.477 & 145.981 & 143.225 & 3.679 & 0.960 \tableend
+	28.188 & 1.064 & 141.586 & 140.080 & 142.369 & 3.767 & 1.147 \tableend
+	27.688 & 1.083 & 136.081 & 134.563 & 141.757 & 3.875 & 1.368 \tableend
+	\end{tabular}
+	\caption{\label{tab:1}Values at each frequency through major correction steps, after averaging. $F_{\nu,\,meas}$ and $F_{\nu,\,thermal}$ are normalized to 4.04 AU. $T_b$ values include CMB correction. Error estimates are given for the final $T_b$ values only.}
+	\end{table}
+
+
+\subsection{Jackknife Testing} \label{s:jackknife}
+
+	Data are presumably fully processed at this point.
+	In order to ensure that no further identifiable systematics are present, we engage in some brief jackknife tests during which we run arbitrarily selected halves of the time-series data through the analysis pipeline and observe the average resulting change in brightness temperatures.
+	The data are halved both on meaningless criteria, such as odd/even index, as well as by criteria with more systematic potential, such as the Jupiter's horizontal altitude at the time of observation.
+
+	It was mentioned earlier that what may be an airmass calibration error in the raw data was detected by one of these jackknife tests, specifically one using Jupiter's altitude.
+	After this correction, all subsequent jackknife tests amount to nothing more than noise at less than 2\% variation from the full-range values, indicating that we have identified all major systematics about which we have information.
+	The consistency of our measurements with the Gibson and WMAP points corroborates this, or at least suggests that we all suffer from the same unknown systematics.
+
+
+
+\section{Model Fitting} \label{s:model}
+
+	The corrected and reduced measurements of Jupiter's thermal spectrum are to be compared with variations on the nominal model in order to determine a consistent NH3 abundance profile through the tropospheric pressure regime to which the SZA channel frequencies are sensitive.
+
+\subsection{Existing NH3 Profile}
+	The nominal model takes fractional abundance to be $5.72 \e{-4}$, nearly $4.5 \times$ solar, in the deep atmosphere, a decision made in response to post-Galileo studies using attenuation of the probe signal as well as data from instruments flown aboard the craft, including the mass spectrometer and the net flux radiometer (de Pater et al. 2016, Folkner et al. 1998, Mahaffy et al. 1999, Sromovsky et al. 1998).
+	The model uses a relative humidity of 100\%, allowing abundance to follow the saturated vapor curve upon adiabatic condensation at $P \approx 0.8$ bar until it settles above $P < 0.3$ bar, past the cloud tops, to a constant $1.20\e{-7}$.
+	Although $4.5 \times$ solar is appropriate for Jupiter's deep atmosphere, it has been known for decades that the NH3 abundance at $P<4$ bar is much smaller (de Pater et al. 2001).
+	Since then, observational evidence in agreement with this theory, such as that from JG, has stacked up and suggests that the model may need to be rectified.
+
+\subsection{Model Generation Through Perturbation}
+	Our modeling process applies a fixed thermochemical model and our nominal constituent abundance profile to a radiative transfer modeling software that creates theoretical predictions for Jupiter's thermal emission spectrum.
+	By making small perturbations to the abundance profile, we generate an ensemble of models to which we compare our emission measurements.
+	The subsequent series of model-measurement comparisons allows us to isolate the particular emission profile in maximal agreement with observations and extend that observational consistency to the model's corresponding NH3 abundance profile.
+
+	This work uses an updated version of the thermochemical model described extensively in de Pater et al. 2005, whose temperature-pressure profile is reproduced in Figure \ref{fig:tp}.
+	We couple to this model the nominal abundance model from de Pater et al. 2016, but slightly vary the NH3 abundance just prior to beginning the radiative transfer calculations.
+	This allows us to explore the effects this parameter has on the 1.3 cm absorption feature and compare the shape of this feature to observations of this section of Jupiter's thermal spectrum.
+	Our modeling process relies on this ``tweaking'' approximation to facilitate a time-efficient search over a wide range of NH3 models for observational compatibility.
+	The tweak method approximates out the minute disturbances to overall thermal structure caused by these unity-order constant multipliers to NH3 abundance and allows us to avoid recalculating the entire atmosphere for each iteration.
+	NH3's contribution dominates tropospheric opacity at these frequencies, so we find that these small, thermodynamically insignificant perturbations to the fractional abundance lead to significant, easily observable differences in atmospheric radiative transfer and the resulting thermal spectrum.
+	In essence, we are able to exert near-complete control, within physical limits, over the local theoretical emission profile by treating NH3 abundance as a function of pressure, all the while keeping it close enough to its original value to ignore thermodynamic effects.
+
+	The thermochemical model and constituent abundance profiles, with trial perturbations, are used to produce theoretical emission profiles through a radiative transfer modeling software, pyplanet, described in de Pater et al. 2014 for its use on Neptune's atmosphere.
+	The code ignores potential opacities from clouds based on evidence that they do not contribute to this part of the spectrum.
+	The next section describes in detail the selection of and search within the model parameter space.
+
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{final_tp_const.png}
+		\caption{\label{fig:tp}On the left, the temperature-pressure profile used in our model of Jupiter's atmosphere. Several weighting functions are overlaid on the right edge of this figure. On the right, the fractional NH3 abundances according to the solar and nominal constituent abundance models plotted next to three selected models. The red dashed line indicates the abundance model that agrees best with the measurements using our 3-parameter grid fit, and the thinner black lines indicate global high- and low-abundance limits using the error bounds for each parameter. The lower bound for high atmosphere abundance is not certain; this plot uses the small value resulting from the Clausius-Clapeyron equation of state. Cloud levels are overlaid on the left hand side of this panel.}
+	\end{figure}
+
+
+\subsection{Three-Parameter Grid}
+
+	A balance must be struck between creating a flexible modeling environment and minimizing the number of parameters.
+	We wish to adjust the NH3 function of pressure such that it fits well to the measurements but is also fairly restricted in number of parameters.
+	The parameters should, to some degree, reflect independent physical attributes of the atmosphere, which facilitates a more natural interpretation of the resulting NH3 function.
+
+	We select our parameters based on characteristics of the pressures and their corresponding NH3 abundances to which our measurements are sensitive.
+	The contribution functions shown on the left panel of Figure \ref{tig:tp} set against the solar and nominal abundance models on the right panel demonstrate some of these characteristics.
+	The ensemble of included contribution functions includes the frequency range extremes of both CARMA and WMAP.
+	It is immediately evident that within our range of sensitivity, NH3 condenses out to form clouds, its abundance plunging as it follows the saturated vapor curve until tropopause prevents it from decreasing any further.
+	CARMA measurements are indicated to be most sensitive to this cloud region, but also probe the sub-cloud region down to almost 1 bar.
+	Most of our sensitivity above and below the cloud layer is provided by the WMAP measurements, extending from 22.44 GHz, near the absorption band center, all the way out to 92.71 GHz where the band begins to level off.
+	Frequencies near the band center should see the most opacity in the atmosphere and therefore should, as indicated by Figure \ref{fig:tp}, probe high in the atmosphere, with some sensitivity above the cloud layer, past tropopause.
+	The point at which abundance stabilizes and departs from the saturation curve is determined by the temperature and pressure at tropopause, so we may be able to set an upper limit on abundance past tropopause and glean some information on atmospheric conditions around this level.
+	The other extreme frequency, closer to the edge of the band, permeates the cloud layer and probes considerably deeper in the atmosphere, down to about 2 bar.
+
+	We briefly note that contribution functions are dependent on the abundance function, which appears to create a logical loop in our determination of appropriate pressure ranges for each parameter.
+	After examining contribution functions created using a wide range of abundance functions, it became evident that these functions change, but not enough to upset the sensitivity-related claims we make throughout this article.
+	Figure \ref{fig:tp} includes eight total contribution functions across four frequencies and two abundance models: the nominal model and the model suggested by the results of this work.
+
+	The sub-cloud abundance, rising up from the well-mixed depths of the atmosphere, should remain constant until the point of condensation where abundance follows the saturated vapor curve.
+	Similarly, abundance above the cloud layer, past tropopause, should remain fairly constant since in this region of rising temperature, there are no methods of constituent removal besides chemical destruction by solar photons.
+	These two pressure regimes should be modified by region-wide constants.
+	The multiplier for the deep, sub-cloud abundance will be denoted $\alpha_{d}$, and the multiplier for abundance above tropopause will be denoted $\alpha_{h}$.
+	These two parameters should be roughly independent of each other; deep atmosphere abundance is not affected by NH3 cloud forming\footnote{It is somewhat affected by formation of other clouds, such as the NH4SH and solution clouds, but these have a much lesser impact on abundance than the primary NH3 condensation.}, but is rather a sort of ``initial condition'', whereas the high atmosphere abundance depends primarily on where the abundance function departs from the saturation curve.
+
+	We include a third parameter to address the cloud forming region during which NH3 abundance follows the saturation curve.
+	This relative humidity, denoted $H$, is expressed as a multiplier strictly operating on the region following the saturation curve.
+
+	In accordance with Galileo measurements, at $P > 8$ bar, where our data have no sensitivity, we elect to leave NH3 abundance at $4.5 \times$ solar.
+	At $P = 8$ bar, we jump abundance down to $\alpha_{d} \times 4.5 \times$ solar.
+	This jump is unphysical, but we lack the sensitivity to reconcile our sub-cloud ``deep'' abundance with the $P > 8$ bar value;
+	by the same token, it does not affect our model-comparison process.
+
+	These three parameters give our model a considerable degree of flexibility while maintaining a physically-motivated approach to modifying the abundance function, an approach that is essential to the validity of the tweaking approximation.
+	The multipliers form a 3-dimensional parameter space of possible model variations.
+	We construct a number of appropriate models within a subset of this space, initially in close proximity to the original values such that our multipliers are set to 1, and test their predicted thermal spectra against observations, converting the set of models to a 4-dimensional space containing our three parameters and a reduced $\chi^{2}$ dimension.
+	We then expand our search in the parameter dimensions in the direction of decreasing $\chi^{2}$ fit to the data.
+	This process continues until we identify a local minimum in a large enough subset of parameter space such that it is overwhelmingly likely that it is a global minimum.
+
+	Each parameter is initialized at 100\% of the nominal model and allowed to range from around 0.1\% to 200\%.
+	This range encompasses a large region surrounding both solar and nominal abundance and comprises every reasonable value of these parameters, considering past work on this model.
+	The minimum found within this region is explored to within 0.5\% of the nominal value.
+	Uncertainty for each parameter is approximated as the region in which the local $\chi^{2}$ value is less than $2\times$ the minimum $\chi^{2}$ value.
+
+	The grid is tested against the 15 CARMA points produced in this work in such a way that it prioritizes the slope of the set, since our data are fairly strong in relative certainty.
+	The 15 measurements are allowed to shift vertically in $T_b$ as a unit, applying the same offset to all measurements so that $\chi^{2}$ is minimized.
+	The $\chi^{2}$ value produced by this process is dominated by differences in the spectral slope, and the resulting $\chi^{2}$ grid contains only slope-sensitive information.
+	This first stage of the model-measurement comparison facilitates evaluation of the parameter space based on our data alone.
+	Next, we include the offset information from our data by disallowing this vertical shift and expand the comparison to 5 nearby WMAP points ranging from 20-95 GHz as well as the 28.5 GHz Gibson point.
+	This second stage of model-measurement comparison attempts to use all available information in order to confirm or amend the conclusion from the first.
+
+	Results from the second stage of comparison, using all information available, are weighted more heavily in our consideration than results from the strictly slope-sensitive stage.
+	We make this decision in response to the analysis of relative uncertainty described in Section \ref{s:error}, in which we find some correlated variation in linear slope across the entire ensemble.
+	The CARMA data are spectrally stable relative to each other, but there appears be some remnant systematic affecting their relative positioning as an ensemble.
+	The inclusion of data originating outside this project will add credibility, as well as greater atmospheric sensitivity, to the result.
+
+
+\section{Results} \label{s:results}
+
+	Our 15 SZA measurements of Jupiter's atmospheric thermal emission show a smoothly sloped sample of the shorter-wavelength side of the 1.3 cm NH3 absorption band.
+	We compare them with the surrounding WMAP and Klein \& Gulkis sets as adjusted in JG as well as Gibson's original point at 28.5 GHz, and updated VLA measurements from de Pater et al. 2016.
+	The SZA observations are consistent to well within 1\% with points from these existing measurements that fall between 27-35 GHz.
+
+	We implement the model-measurement comparison scheme discussed in the previous section and generate a grid of theoretical emission profiles and corresponding $\chi^{2}$ comparison results.
+
+
+\subsection{Deep Atmosphere Abundance $\alpha_{d}$}
+
+	We examine deep atmosphere abundance relative to the nominal abundance value of $5.72\e{-4}$.
+	The model comparison process using all available information indicates a value of $2.40\e{-4}$, with uncertainty bounding it between $[2.26, 2.57] \e{-4}$.
+	This value produces a predicted emission profile that agrees well with all observations, especially the high frequency WMAP points most sensitive to the deeper atmosphere.
+
+	The comparison process using the relative positions of CARMA points suggests a value of $1.86\e{-4}$, but is dominated by uncertainty, so we consider this result consistent with the other and defer to the more tightly bound value given above.
+
+\subsection{Relative Humidity $H$}
+
+	Humidity is examined relative to the saturation curve region in the nominal model, roughly between $0.3 < P < 0.8$ bar.
+	The nominal model follows 100\% humidity, so our results will be considered relative to a fully saturated model.
+	The comparison using all available information suggests a humidity of $56.5\%$, bounded between $[50\%, 63.5\%]$.
+	This humidity adjustment produces models that are consistent with all observations, especially the lower frequency CARMA points, the Gibson point that are most sensitive to this pressure range.
+
+	The relative position comparison using CARMA points produced little else than noise.
+	Relative humidity appears to have a slight and unpredictable effect on the slope of the points.
+	We defer to the well-bounded result above.
+
+	JG states that NH3 abundance is, on average, subsaturated by at least a factor of 2 at $P < 0.6$ bar.
+	Our results corroborate this subsaturation down to the factor of 2, but add a tighter bound based on 4 independent sets of measurements.
+
+
+\subsection{High Atmosphere Abundance $\alpha_{h}$}
+
+	High atmosphere abundance is examined relative to the nominal value of $1.2\e{-7}$.
+	The most inclusive comparison suggests a value of about $2.8\e{-8}$, nearly one fifth of the original, but has an upper bound of $2.4\e{-7}$, nearly twice the original value.
+	Since we are not very sensitive to these pressures, we are not able to provide a lower bound.
+
+	This result relies primarily on the lowest frequency WMAP measurement but has some input from the lower frequency CARMA measurements.
+	It is difficult to place any reasonable bound on the high atmosphere abundance due to the lack of data near the band center; the Klein \& Gulkis measurements were deemed to uncertain for our comparison, but all tend toward temperatures higher than the WMAP point.
+	Higher temperature at the band center would indicate a lower pressure departure from the saturation curve and consequently a smaller high atmosphere abundance.
+	The precise number found in our analysis is likely meaningless -- nevertheless, it is quite possible that the high atmosphere abundance should be smaller than in the nominal model.
+
+	We employ one additional method of discerning the top abundance according to the temperature-pressure profile in this thermochemical model using the Clausius-Clapeyron equation of state with constants inserted for NH3:
+	$$ X_{\text{NH3}}(P, T) = (1.342\e{7}) P e^{-3753.6/T} $$
+	Given the $(P, T)$ pair where $T$ is at its minimum, this should yield the sustained NH3 abundance at and above the point of depature from the saturation curve, assuming a fully saturated atmosphere.
+	We apply the nominal thermochemical model and find a high atmosphere abundance of almost $1.9\e{-8}$, which is consistent within uncertainty to our similarly low value.
+	If the atmosphere is anything less than fully saturated, this value should drop even further.
+	In general, these two methods agree on a lower high atmosphere abundance.
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{final_models_wl.png}
+		\caption{\label{fig:emission_wl}CARMA measurements of disk-averaged brightness temperature together with extant measurements. Nominal model is included, as well as the model we suggest in this work, using parameters discussed in Section \ref{s:results}, and the global high- and low-abundance limits. The lower limit for high atmospheric abundance is, as discussed in the text, not stated in this work, but we use the result from the Clausius-Clapeyron equation here. CARMA measurements are shown with relative certainty at the capped error bars and absolute uncertainty at the larger, uncapped bars. Note the uniformity in absolute certainty and the frequency-dependent variation in relative uncertainty.}
+	\end{figure}
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{final_models_freq.png}
+		\caption{\label{fig:emission_freq}Similar to Figure \ref{fig:emission_freq}, but restricted to a smaller spectral range and set against a frequency axis. Inset panel provides a clearer view of the CARMA points reduced in this work. We include two additional models, indicated by cyan lines, representing one-parameter deviations from the nominal model; in other words, we hold two parameters at 100\% of the nominal value and let the third take on the preferred value based on the $\chi^{2}$ fit so as to demonstrate the effects of the parameters as well as their general independence to each other. The effects of relative humidity and deep atmosphere abundance are shown by the two cyan lines. High atmosphere abundance is not shown here, but when decreased raises the temperature at the band center and accounts for the band center difference between the relative-humidity-only and preferred (red-dashed) models.}
+	\end{figure}
+
+\section{Conclusion}
+We began with 37 secondary calibration scans of Jupiter over the course of 5 months, made with CARMA at 15 different frequencies between 27-35 GHz.
+From there, we reduced this into 15 measurements of Jupiter's thermal brightness, limited to the case of the disk-averaged atmosphere.
+With these data, we filled in a $\sim 10$ GHz wide section of Jupiter's thermal emission profile, near an NH3 absorption band.
+CARMA's strong spectral stability lends our data a strong certainty in slope, so we used this slope measurement as well as our absolute calibration, to some degree, and several surrounding data to better characterize the band shape.
+We modeled to this band shape by designing a model-comparison process around a radiative transfer code and found that, compared to the nominal abundance value, our characterization of the band shape suggests a globally lower abundance, to varying degrees at three distinct pressure regions in the atmosphere.
+Deep atmosphere abundance between $P < 8$ bar and the $P \sim 0.8$ bar condensation point is found to be $2.40\e{-4}$, bounded between $[2.26, 2.57] \e{-4}$.
+Relative humidity, within the NH3 cloud layer where abundance follows the saturation curve, is found to be $56.5\%$, bounded between $[50\%, 63.5\%]$.
+Top atmosphere abundance, above the NH3 cloud layer and past the departure from the saturation curve, is found to have an upper bound of $2.4\e{-7}$, but is indicated through two separate analysis methods to be closer to $2\e{-8}$.
+These results seem to echo the conclusion made in JG, especially that of subsaturation by a factor of 2.
+
+We hope that this measurement set will be useful in future explorations, as have WMAP, Gibson, and others been in ours.
+These results are of course limited to the case of the disk-averaged atmosphere, and we look forward to ongoing and future projects who will expand this research to the spatially resolved case.
+We look forward to the release of data from the Juno probe mission in particular; while its investigation will involve some spatial resolution, it may serve to confirm or correct our findings.
+
+CARMA's calibration is strong enough that we feel these reduced thermal measurements may be useful as calibration information for interferometers lacking short baselines.
+The measurements produced in this work are believed to encompass all flux from the disk, so they may be treated as ``single-dish'' flux measurements to give calibration context to interferometer scans.
+
+
+
+\section{References}
+\begin{enumerate}
+	\item de Pater 1990 (synch low wl)
+	\item de Pater et al. 2003
+	\item de Pater et al. 2014
+	\item de Pater et al. 2016
+	\item Gibson et al. 2005
+	\item Klein 1976
+	\item Keating et al. 2016
+	\item Thornton and Welch 1963
+	\item Weiland et al. 2011
+	\item Wildt 1937 (first ammonia)
+\end{enumerate}
+
+\end{document}
