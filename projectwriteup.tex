@@ -18,8 +18,8 @@
 
 \maketitle
 \abstract{
-	We present a new set of CARMA measurements of Jupiter's thermal emission in the microwave, near the 1.3 cm ammonia (NH$_{3}$) absorption band, and a subsequent re-analysis of ammonia abundance in the upper troposphere, near $0.3<P<2$ bar, based on radiative transfer modeling.
-	Upon investigation, we find ammonia to be present at over half the nominal value below the $P\sim 0.8$ bar NH$_{3}$ cloud layer, corresponding to a new deep ($P \sim 8$ bar) atmosphere fractional abundance of $2.4\e{-4}$.
+	We present a new set of CARMA measurements of Jupiter's thermal emission in the microwave, near the 1.3 cm ammonia (NH$_{3}$) absorption band, which we use to investigate ammonia abundance in the upper troposphere, near $0.3<P<2$ bar, based on radiative transfer modeling.
+	We find ammonia to be present at over half the nominal value below the $P\sim 0.8$ bar NH$_{3}$ cloud layer, corresponding to a new deep ($P \sim 8$ bar) atmosphere fractional abundance of $2.4\e{-4}$.
 	This conclusion is not extended past $P = 8$ bar, since our measurements have no sensitivity and the result would contradict Galileo probe results.
 	We find the NH$_{3}$ cloud-forming region between $0.3 < P < 0.8$ bar to be globally subsaturated by 55\% on average, in accordance with the result in Gibson et al. 2005.
 	While these data are not very sensitive to the region above the cloud layer, we are able to set an upper limit of $2.4\e{-7}$ on the abudance here, although both our fitting process and the Clausius-Clapeyron equation of state suggest something closer to $\sim 2\e{-8}$.
@@ -147,7 +147,7 @@
 	We introduce a thermal component as well, calculated by fractionalizing each thermal error by its accompanying measurement, averaging across each channel, and denormalizing with the channel average.
 	$$\sigma_{th} = \Bigg\langle \frac{\sigma_{i}}{F_{\nu,i}} \Bigg\rangle_{\nu} \langle F_{\nu, i} \rangle_{\nu} $$
 
-	The final relative uncertainty measurement contains these three values.
+	The final relative uncertainty measurement contains the thermal component $\sigma_{th}$ as well as the mean $\langle \delta_{\nu, i} \rangle_{\nu}$ and standard deviation $\Big\langle (\delta_{\nu, i} - \langle \delta_{\nu, i} \rangle_{\nu})^{2} \Big\rangle_{\nu}^{1/2}$ of the daily deviations by channel.
 	The third term, the variance of the channel's daily deviations, dominates the entire measurement and gives each channel a relative uncertainty on the order of a jansky.
 	$$ \sigma_{R}^{2} = \sigma_{th}^{2} + \langle \delta_{\nu, i} \rangle_{\nu}^{2}
 		 + \Big\langle (\delta_{\nu, i} - \langle \delta_{\nu, i} \rangle_{\nu})^{2} \Big\rangle_{\nu} $$
@@ -352,5 +352,9 @@
 	\item Weiland et al. 2011
 	\item Wildt 1937 (first ammonia)
 \end{enumerate}
+
+\bibliographystyle{yahapj}
+\bibliography{references}
+
 
 \end{document}

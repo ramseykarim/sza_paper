@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.27)  1 SEP 2017 13:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.27)  6 SEP 2017 21:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -267,83 +267,82 @@ Missing character: There is no “ in font cmr9!
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<final_raw.png, id=23, 982.1493pt x 346.896pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<final_raw.png, id=20, 982.1493pt x 346.896pt>
 File: final_raw.png Graphic file (type png)
  <use final_raw.png>
-Package pdftex.def Info: final_raw.png used on input line 99.
+Package pdftex.def Info: final_raw.png used on input line 87.
 (pdftex.def)             Requested size: 469.75502pt x 165.92064pt.
 
-<final_airmass.png, id=25, 986.4855pt x 348.3414pt>
+<final_airmass.png, id=22, 986.4855pt x 348.3414pt>
 File: final_airmass.png Graphic file (type png)
  <use final_airmass.png>
-Package pdftex.def Info: final_airmass.png used on input line 106.
+Package pdftex.def Info: final_airmass.png used on input line 94.
 (pdftex.def)             Requested size: 469.75502pt x 165.87846pt.
 
-[3 <./final_raw.png> <./final_airmass.png>] [4] [5] [6]
-<final_tp_const.png, id=46, 970.5861pt x 421.3341pt>
+[2] [3 <./final_raw.png> <./final_airmass.png>] [4]
+Overfull \hbox (8.58678pt too wide) in paragraph at lines 177--177
+[]\OT1/cmr/bx/n/12 Conversion to Bright-ness Tem-per-a-ture and Cos-mic Mi-crow
+ave Back-
+ []
+
+[5] [6] <final_tp_const.png, id=46, 970.5861pt x 421.3341pt>
 File: final_tp_const.png Graphic file (type png)
- <use final_tp_const.png>
-Package pdftex.def Info: final_tp_const.png used on input line 278.
+
+<use final_tp_const.png>
+Package pdftex.def Info: final_tp_const.png used on input line 267.
 (pdftex.def)             Requested size: 469.75502pt x 203.92247pt.
-
-
-LaTeX Warning: Reference `tig:tp' on page 7 undefined on input line 290.
-
-[7] [8 <./final_tp_const.png>] [9]
-<final_models_wl.png, id=59, 719.8092pt x 492.8814pt>
+ [7]
+<final_models_wl.png, id=52, 719.8092pt x 492.8814pt>
 File: final_models_wl.png Graphic file (type png)
 
 <use final_models_wl.png>
-Package pdftex.def Info: final_models_wl.png used on input line 393.
+Package pdftex.def Info: final_models_wl.png used on input line 310.
 (pdftex.def)             Requested size: 469.75502pt x 321.6702pt.
 
-<final_models_freq.png, id=60, 658.3797pt x 492.8814pt>
+<final_models_freq.png, id=53, 658.3797pt x 492.8814pt>
 File: final_models_freq.png Graphic file (type png)
 
 <use final_models_freq.png>
-Package pdftex.def Info: final_models_freq.png used on input line 399.
+Package pdftex.def Info: final_models_freq.png used on input line 316.
 (pdftex.def)             Requested size: 469.75502pt x 351.67049pt.
- [10] [11 <./final_models_wl.png>] [12 <./final_models_freq.png>] [13] (./proje
-ctwriteup.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ [8 <./final_tp_const.png>] [9 <./final_models_wl.png>] [10 <./final_models_fre
+q.png>]
+No file projectwriteup.bbl.
+[11] (./projectwriteup.aux) ) 
 Here is how much of TeX's memory you used:
- 2690 strings out of 494953
- 36936 string characters out of 6180977
- 111606 words of memory out of 5000000
- 5937 multiletter control sequences out of 15000+600000
+ 2692 strings out of 494953
+ 36956 string characters out of 6180977
+ 115621 words of memory out of 5000000
+ 5938 multiletter control sequences out of 15000+600000
  11659 words of font info for 42 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,10n,32p,988b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsl9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.p
-fb>
-Output written on projectwriteup.pdf (13 pages, 671436 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cm
+ex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl9.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on projectwriteup.pdf (11 pages, 653982 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 139 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
