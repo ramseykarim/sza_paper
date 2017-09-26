@@ -5,6 +5,7 @@
 \usepackage{color}
 \usepackage{hhline}
 \usepackage{natbib}
+\usepackage{aas_macros}
 
 \newcommand{\expon}[1]{e^{#1}}
 \newcommand{\e}[1]{\times 10^{#1}}
@@ -19,8 +20,8 @@
 
 \maketitle
 \abstract{
-	We present a new set of CARMA measurements of Jupiter's thermal emission in the microwave, near the 1.3 cm ammonia (NH$_{3}$) absorption band, which we use to investigate ammonia abundance in the upper troposphere, near $0.3<P<2$ bar, based on radiative transfer modeling.
-	We find ammonia to be present at over half the nominal value below the $P\sim 0.8$ bar NH$_{3}$ cloud layer, corresponding to a new deep ($P \sim 8$ bar) atmosphere fractional abundance of $2.4\e{-4}$.
+	We present a new set of CARMA measurements of Jupiter's microwave thermal emission near the 1.3 cm ammonia (NH$_{3}$) absorption band, which we use to investigate ammonia abundance in the upper troposphere, near $0.3<P<2$ bar, based on radiative transfer modeling.
+	We find ammonia to be present at over half the nominal [WHICH NOMINAL] value below the $P\sim 0.8$ bar NH$_{3}$ cloud layer, corresponding to a new deep ($P \sim 8$ bar) atmosphere fractional abundance of $2.4\e{-4}$.
 	This conclusion is not extended past $P = 8$ bar, since our measurements have no sensitivity and the result would contradict Galileo probe results.
 	We find the NH$_{3}$ cloud-forming region between $0.3 < P < 0.8$ bar to be globally subsaturated by 55\% on average, in accordance with the result in Gibson et al. 2005.
 	While these data are not very sensitive to the region above the cloud layer, we are able to set an upper limit of $2.4\e{-7}$ on the abudance here, although both our fitting process and the Clausius-Clapeyron equation of state suggest something closer to $\sim 2\e{-8}$.
@@ -30,42 +31,37 @@
 \section{Introduction} \label{s:introduction}
 
 	Microwave observations of Jupiter's atmosphere are generally dominated by pressure-broadened spectral features of ammonia gas in the troposphere.
-	The most notable feature in this region of the gas giant's thermal spectrum is the 1.3 cm NH$_{3}$ inversion/absorption band, first reported as a single, broad line by Law and Staelin 1968 and declared by Klein and Gulkis 1978 to be a ``diagnostic of the pressure and temperature profiles in the cloud-forming region of the Jovian atmosphere.''
+	The most notable feature in this region of the gas giant's thermal spectrum is the 1.3 cm NH$_{3}$ inversion/absorption band, first reported as a single, broad line by \citealt{1968ApJ...154.1077L} and found by \citealt{1978Icar...35...44K} to be a ``diagnostic of the pressure and temperature profiles in the cloud-forming region of the Jovian atmosphere.''
 	As we continue to sample Jupiter's thermal spectrum around this band, we can better characterize the shape of this spectral feature, which, through proper analysis, provides us with a deeper understanding of the planet's vertical structure and improves Jupiter's usefulness as a radio calibrator.
 
-	Decades of disk-averaged, and more recently, spatially resolved, observations as well as in situ probe measurements have contributed to understanding the planet's atmospheric structure.
-	Ammonia's presence in the jovian atmosphere was first noted by Wildt 1937 using evidence from the visible spectrum, but it was not until the 1950s-60s that the radio spectrum was explored more thoroughly in order to derive a consistent ammonia abundance.
-	This mid-to-late 20th century investigation of Jupiter's microwave spectrum suggested a relatively straightforward model involving an adiabatic atmosphere with roughly solar NH$_{3}$ abundance in the deep atmosphere, which is considered to be well-mixed.
-	The detailed radiative transfer analysis presented in de Pater and Massie 1985 agrees, stating solar NH$_{3}$ abundance to within a factor of 2 until $P < 0.5$ bar, above which NH$_{3}$ drops by $\sim 10^{3}$.
+	Decades of disk-averaged, and more recently, spatially resolved, observations as well as in situ probe measurements have contributed to our understanding of the planet's atmospheric structure
+%Ammonia's presence in the jovian atmosphere was first noted by \citealt{1937ApJ....86..321W} using evidence from the visible spectrum, but it was not until the 1950s-60s that the radio spectrum was explored more thoroughly in order to derive a consistent ammonia abundance.
+%This mid-to-late 20th century investigation of Jupiter's microwave spectrum suggested 
+initially revealing a relatively straightforward model involving an adiabatic atmosphere with roughly solar NH$_{3}$ abundance in the deep atmosphere, which is considered to be well-mixed.
+	The detailed radiative transfer analysis presented in \citealt{1985Icar...62..143D} agrees, stating solar NH$_{3}$ abundance to within a factor of 2 until $P < 0.5$ bar, above which NH$_{3}$ drops by $\sim 10^{3}$.
 	This depletion is consistent with NH$_{3}$ condensation following the saturated vapor curve.
 
-	Modern efforts to uncover more about the planetâ€™s vertical structure have also raised new questions (de Pater et al. 2005).
-	The Galileo probe mission of the 1990s presented {\sl in situ} measurements of NH$_{3}$ abundance that arguably conflict with ground-based radio observational models, creating what de Pater et al. 2005 calls the ``Galileo â€“ Ground-based Microwave Paradox.''
+	Modern efforts to uncover more about the planet'€™s vertical structure have also raised new questions \citep{2005Icar..173..425D}.
+	The Galileo probe mission of the 1990s presented {\sl in situ} measurements of NH$_{3}$ abundance that arguably conflict with models derived from ground-based observations, creating what was described in that paper as the ``Galileo's Ground-based Microwave Paradox.''
 	Probe measurements suggest that NH$_{3}$ abundance should be nearly 4$\times$ solar
 		\footnote{We designate a solar model based on the most recent proto-solar elemental abundance estimates (Asplund et al. 2009). N/H2 is taken to be $1.48 \e{-4}$. Henceforth, the solar NH$_{3}$ abundance value is $1.28 \e{-4}$.}. 
-	Given the previously accepted model, this result was jarring.
-	The paradox demands further investigation in both observational categories.
+	Given the previously accepted model, this result was jarring to our understanding of the atmosphere's structure and dynamics.  To improve this understanding additional datasets are needed along with updated modeling using the latest measurement microwave properties of, primarily, ammonia gas.
 
-	This work focuses on the ground-based and disk-averaged case and aims to fine-tune the model referred to by de Pater et al. 2001 as the ``Radio Model'' of NH$_{3}$ abundance based on this type of observation.
-	Contemporary microwave observations include the 20-24 GHz cluster by Klein and Gulkis 1978 and the 20-90 GHz span of 5 measurements made using the Wilkinson Microwave Anisotropy Probe (WMAP) presented in Page et al. 2003 and updated in Weiland et al. 2011.
-	Gibson et al. 2003 provides a single, well-calibrated point at 28.5 GHz while Gibson et al. 2005 (henceforth JG) corrects and discusses all three of these sets, concluding that NH$_{3}$ is globally subsolar between $0.6 < P < 2$ bar and subsaturated by more than 50\% between $0.4 < P < 0.6$ bar.
-	Measurements presented more recently by de Pater et al. 2016 fill in the lower-frequency side, from about 5 to 20 GHz.
-	Each of these contemporary measurements contributes heavily to the current radio model and our understanding of the planet's vertical structure;
-	the multi-measurement sets paint the general line shape in broad strokes across tens of GHz, while the point from Gibson et al. 2003 confidently pins down an absolute brightness temperature.
-	What is not yet seen in this spectrum is a tightly packed cluster of self-consistent measurements indicating a local spectral slope.
-	We wish to present this missing piece with our contribution of 15 thermal brightness measurements spanning 27-35 GHz, a short frequency regime relative to the decades spanned by extant sets.
-
-	de Pater et al. 2016 applies a model that takes NH$_{3}$ abundance to be $4.5 \times$ solar ($5.72 \e{-4}$) in the deep atmosphere, inspired by the Galileo results, and then follows the saturated vapor curve within and above the cloud layers.
+	This work presents new ground-based observations over a very wide bandwidth with an interferometer that does not resolve the planet so that more accurate disk-averaged brightness temperatures may be determined.  It also provides a single systematically-consistent dataset over its band (27-35 GHz) that may be used in conjunction with the many decades of observations of our largest planet ({\em e.g.} \citealt{1978Icar...35...44K}, \citealt{2003ApJS..148...39P}, \citealt{2011ApJS..192...19W}, \citealt{2005Icar..173..439G}, \citealt{2016Sci...352.1198D}).
+de Pater et al. 2016
+Having a well-calibrated systematically-consistent dataset over this broad bandwidth complements the single absolutely calibrated point at near 28.5 GHz in \citealt{2005Icar..173..439G} (hereafter JG).
+	 JG corrects and discusses all three of these sets, concluding that NH$_{3}$ is globally subsolar between $0.6 < P < 2$ bar and subsaturated by more than 50\% between $0.4 < P < 0.6$ bar.
+	 
+	Based on these measurements we fine-tune the model presented in \citealt{2001Icar..149...66D} and extended in \citealt{2016Sci...352.1198D} which based on Galileo measurements takes NH$_{3}$ abundance to be $4.5 \times$ solar ($5.72 \e{-4}$) in the deep atmosphere and then follows the saturated vapor curve within and above the cloud layers.
 	This model, described in more detail in Section \ref{s:model}, is henceforth referred to as the ``nominal'' model and serves as the base model for this work.
-	From this point, our radiative transfer analysis of the available measurements, described below, should tune this nominal model into a Radio Model of improved accuracy.
+	%From this point, our radiative transfer analysis of the available measurements, described below, should tune this nominal model into a Radio Model of improved accuracy.
 
 
 \section{Data} \label{s:data}
-
-	One of the last studies conducted with the Combined Array for Research in Millimeter-wave Astronomy (CARMA) was a CO power spectrum survey which aimed to measure the CO(1-0) transition in redshift $\sim 3$ galaxies (Keating et al. 2015; Keating et al. 2016, hereafter referred to as COPSS).
-	The compact, 8-element Sunyaev-Zel'dovich Array (SZA) subset of CARMA was used to take various field scans between 27-35 GHz, where such a redshifted $\lambda_{0} = 115$ GHz line would lie.
-	COPSS used Mars as the primary calibrator, but recorded secondary calibration scans of Jupiter for redundancy.
-	It is these observations, taken between December 2014 and the array's decommission in April 2015, that are used in this work.
+	One of the last studies conducted with the Combined Array for Research in Millimeter-wave Astronomy (CARMA) was a CO power spectrum survey which aimed to measure the CO(1-0) transition in redshift $\sim 3$ galaxies (\citealt{2015ApJ...814..140K}; \citealt{2016ApJ...830...34K}, hereafter referred to as COPSS).
+	The compact, 8-element Sunyaev-Zel'dovich Array (SZA) subset of CARMA was used to take various field scans between 27-35 GHz to measure the redshifted $\lambda_{0} = 115$ GHz line.
+	COPSS used Mars as the primary calibrator, and Jupiter as the secondary calibrator scans of Jupiter.
+	It is these Jupiter observations, taken between December 2014 and the array's decommissioning in April 2015, that are used in this work.
 
 	The SZA is a set of eight 3.5 m elements sensitive to left circularly polarized radiation.
 	Since it does not resolve the planet, the synthesized beam from this array is sufficient for measurements of Jupiter's total flux density.
