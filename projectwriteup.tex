@@ -21,15 +21,16 @@
 \maketitle
 \abstract{
 	We present a new set of CARMA measurements of Jupiter's microwave thermal emission near the 1.3 cm ammonia (NH$_{3}$) absorption band, which we use to investigate ammonia abundance in the upper troposphere, near $0.3<P<2$ bar, based on radiative transfer modeling.
-	We find ammonia to be present at over half the nominal [WHICH NOMINAL] value below the $P\sim 0.8$ bar NH$_{3}$ cloud layer, corresponding to a new deep ($P \sim 8$ bar) atmosphere fractional abundance of $2.4\e{-4}$.
+	We find ammonia to be present at over half the nominal value below the $P\sim 0.8$ bar NH$_{3}$ cloud layer specified in \citealt{}, corresponding to a new deep ($P \sim 8$ bar) atmosphere fractional abundance of $2.4\e{-4}$.
 	This conclusion is not extended past $P = 8$ bar, since our measurements have no sensitivity and the result would contradict Galileo probe results.
 	We find the NH$_{3}$ cloud-forming region between $0.3 < P < 0.8$ bar to be globally subsaturated by 55\% on average, in accordance with the result in Gibson et al. 2005.
-	While these data are not very sensitive to the region above the cloud layer, we are able to set an upper limit of $2.4\e{-7}$ on the abudance here, although both our fitting process and the Clausius-Clapeyron equation of state suggest something closer to $\sim 2\e{-8}$.
+	While these data are not very sensitive to the region above the cloud layer, we are able to set an upper limit of $2.4\e{-7}$ on the abundance here, although both our fitting process and the Clausius-Clapeyron equation of state suggest something closer to $\sim 2\e{-8}$.
 	All three results agree that NH$_{3}$ abundance is a factor of 2 lower than suggested by Galileo probe results above $P < 2$ bar, a conclusion consistent with the Gibson et al. 2005 result as well as the ground-based radio models discussed in de Pater et al. 2001.
 }
 
-\section{Introduction} \label{s:introduction}
+NEED TO REFER TO THE TABLES AND FIGURES IN THE TEXT
 
+\section{Introduction} \label{s:introduction}
 	Microwave observations of Jupiter's atmosphere are generally dominated by pressure-broadened spectral features of ammonia gas in the troposphere.
 	The most notable feature in this region of the gas giant's thermal spectrum is the 1.3 cm NH$_{3}$ inversion/absorption band, first reported as a single, broad line by \citealt{1968ApJ...154.1077L} and found by \citealt{1978Icar...35...44K} to be a ``diagnostic of the pressure and temperature profiles in the cloud-forming region of the Jovian atmosphere.''
 	As we continue to sample Jupiter's thermal spectrum around this band, we can better characterize the shape of this spectral feature, which, through proper analysis, provides us with a deeper understanding of the planet's vertical structure and improves Jupiter's usefulness as a radio calibrator.
@@ -63,19 +64,17 @@ Having a well-calibrated systematically-consistent dataset over this broad bandw
 	COPSS used Mars as the primary calibrator, and Jupiter as the secondary calibrator scans of Jupiter.
 	It is these Jupiter observations, taken between December 2014 and the array's decommissioning in April 2015, that are used in this work.
 
-	The SZA is a set of eight 3.5 m elements sensitive to left circularly polarized radiation.
-	Since it does not resolve the planet, the synthesized beam from this array is sufficient for measurements of Jupiter's total flux density.
-	All further analysis is thus restricted to the case of the atmosphere averaged across the projected observable surface of the planet at the time of the observation, which, when averaged over time, presents a reasonable disk-averaged measurement of the planet's flux density.
+	The SZA is a set of eight 3.5 m elements sensitive to left circularly polarized radiation in a compact array (REFERENCE KARTO FOR ARRAY CONFIG)
+	Since it does not resolve the planet, the array is well-suited for accurate measurements of Jupiter's total flux density.
 	The calibration data from COPSS comprise flux densities spanning 15 channels from 27-35 GHz (0.8 to 1.1 cm) and 100 days between December 2014 and April 2015.
 	Error estimates accompanying the data have typical values of $\sim0.01$ Jy and account only for thermal error.
 	Uncertainty in the absolute flux calibration is preliminarily estimated at $<5\%$ according to COPSS, but we present our own thorough investigation in Section \ref{s:error}.
-	CARMA in its entirety is a fairly spectrally stable instrument, so we expect relative uncertainty to be somewhat smaller than absolute uncertainty; this too will be discussed shortly.
+	CARMA in its entirety is a fairly spectrally stable instrument, so we expect relative uncertainty to be somewhat smaller than absolute uncertainty (sec. \ref{s:xxx}).
 
-\subsection{Flux Measurement Reduction}
-
-	Reduction of these data, for each channel, converts a time series of flux densities to a single brightness temperature.
+\subsection{Flux Measurement Reduction} \label{}
+	Reduction of these data converts a time series of flux densities to a single brightness temperature on channel-by-channel basis.
 	The process also isolates and corrects for a variety of systematics throughout the process.
-	The result is 15 time- and disk-averaged measurements of Jupiter's brightness on the short wave side of the 1.3 cm ammonia absorption band.
+	The result is 15 time- and disk-averaged measurements of Jupiter's brightness near the 1.3 cm ammonia absorption band.
 
 	The effects of Jupiter's distance from Earth during the observational period are removed through distance normalization to the nominal value of 4.04 AU, ``flattening'' each channel's measurement as is made evident between the two panels in Figure \ref{fig:raw}.
 	This step facilitates examination of antenna gain error, indicated by the variance in the normalized points as well as the cross-channel behavior during individual observations.
@@ -104,41 +103,40 @@ Having a well-calibrated systematically-consistent dataset over this broad bandw
 
 \subsubsection{Absolute ($\sigma_{A}$) and Relative ($\sigma_{R}$) Uncertainty} \label{s:error}
 	We define two distinct error measurements for the data set: absolute uncertainty $\sigma_{A}$ and relative uncertainty $\sigma_{R}$.
-	Absolute uncertainty will quantify our estimate of the calibration accuracy of the SZA and lends the entire ensemble of resulting points a potential vertical offset.
-	The $\sigma_{A}$ measurement cannot wildly upset the relationship between points within this set; it is primarily a characteristic of the ensemble as a whole.
-	From COPSS, we quote an estimated upper limit of $<5\%$ on this calibration error.
+	Absolute uncertainty quantifies our estimate of the overall calibration accuracy of the SZA, estimating how close the data are to the actual values.  It is determined by the systematics of the instrument.
+	%The $\sigma_{A}$ measurement cannot wildly upset the relationship between points within this set; it is primarily a characteristic of the ensemble as a whole.
+	From COPSS, an estimated upper limit of $<5\%$ on this calibration error is quoted.
 
-	Meanwhile, relative uncertainty quantifies the stability of each channel with respect to the others, estimating internal consistency rather than absolute accuracy.
-	We know CARMA to exhibit strong spectral stability and can observe this feature in the strongly correlated cross-channel behavior displayed in Figures \ref{fig:raw} and \ref{fig:air}, which suggests that the $\sigma_{R}$ measurement, while allowing some independent uncertainty on points, is expected to be smaller than $\sigma_{A}$ and so will not have as great an effect on the overall position of the ensemble.
+	Relative uncertainty quantifies the stability of each channel with respect to the others, estimating internal consistency rather than absolute accuracy.
+	CARMA has strong spectral stability and can observe this feature in the strongly correlated cross-channel behavior displayed in Figures \ref{fig:raw} and \ref{fig:air}, which suggests that the $\sigma_{R}$ measurement, while allowing some independent uncertainty on points, is expected to be smaller than $\sigma_{A}$ and so will not have as great an effect on the overall position of the ensemble.
 	$\sigma_{R}$ is useful in defending the use of the relative structure of the ensemble as a comparably reliable tool to the absolute position as well as quantifying a model's match to this relative structure during the model-comparison process.
 	$\sigma_{A}$, by contrast, serves as a more conventional uncertainty estimate.
 
-	We approach the absolute uncertainty $\sigma_{A}$ estimate using statistical properties of the flux density ensemble along with their stated thermal errors.
-	The statistical contribution $\hat{\sigma}$ dwarfs the thermal contribution $\hat{n}$, but is included for the sake of rigor.
+	We approach the absolute uncertainty $\sigma_{A}$ estimate using statistical properties of the flux density ensemble along with their stated thermal errors.  The absolute uncertainty is the quadrature  sum of the weighted average of the individual data and the thermal noise of each measurement and may be written
 	$$\sigma_{A}(\hat{\sigma}, \hat{n}) = \hat{\sigma}^{2} + \hat{n}^{2}$$
-	Thermal contribution $\hat{n}$ is calculated as the reciprocal sum of thermal uncertainties for a given channel.
-	With $w_{i}$ defined above, $\hat{n}$ is defined
+The first term is 
+		$$\hat{\sigma}^{2} = \frac{\sum_{i} w_{i} \big( F_{\nu,i} - \langle F_{\nu} \rangle \big)^{2} }{\sum_{i} w_{i}}$$
+	The second term, the thermal contribution $\hat{n}$, is calculated as the reciprocal sum of thermal uncertainties for a given channel.
+	With $w_{i}$ defined above, $\hat{n}$ is
 	$$ \frac{1}{\hat{n}^{2}} = \sum_{i} w_{i} $$
-	Statistical contribution $\hat{\sigma}$, dominating this absolute uncertainty estimate, is calculated as a weighted standard deviation, given $w_{i}$ as well as the series fluxes $F_{\nu,i}$ and the channel average $\langle F_{\nu} \rangle$.
-	$$\hat{\sigma}^{2} = \frac{\sum_{i} w_{i} \big( F_{\nu,i} - \langle F_{\nu} \rangle \big)^{2} }{\sum_{i} w_{i}}$$
 	In this way, we merge statistical 1-sigma error on a channel's flux ensemble with the thermal uncertainty of the points themselves and produce the value $\sigma_{A}$, our estimate of uncertainty on the absolute calibration of the instrument.
 	This we find to be closer to $\sim2\%$, which falls under the upper limit stated by COPSS.
 
 	Relative uncertainty $\sigma_{R}$ comprises both thermal contribution as well as the tendency of each channel to deviate from the others.
-	A perfectly stable instrument should exhibit a consistent cross-channel reaction to small, day-to-day variation in observed flux; unexpected behavior should be reflected in $\sigma_{R}$.
+	A perfectly stable instrument should exhibit a consistent cross-channel response to small, day-to-day variation in observed flux; unexpected behavior should be reflected in $\sigma_{R}$.
 	We compare observations across channels by normalizing each channel with its average.\footnote{Until now, all averages have been across time, isolated to each channel.
 	In this section, that will no longer be the case, so averages will be marked as either channel averages ($\nu$) summed across all observations as before, or ``daily'' averages ($i$) calculated with sums across all channels, isolated to each observation.}
 	The normalized measurements are denoted $f_{\nu, i}$.
 	$$ f_{\nu, i} = \frac{F_{\nu, i}}{\langle F_{\nu, i} \rangle_{\nu}} $$
 	This fraction is averaged across each observation to find the daily mean deviation from each channel's respective average.
 	A stable instrument's channels would exhibit minimal spread around this daily mean deviation, and any spread should be uncorrelated with channel.
-	We isolate the residuals $\delta_{\nu, i}$ from this daily average by subtracting the daily mean deviation from each observation set of normalized measurements, so as to excuse the daily deviation itself but examine each channel's deviation from this deviation.
+	We isolate the residuals $\delta_{\nu, i}$ from this daily average by subtracting the daily mean deviation from each observation set of normalized measurements, so as to exclude the daily deviation itself and examine each channel's deviation from this deviation.
 	These residuals are defractionalized by multiplying by the channel average.
 	$$ \delta_{\nu, i} = (f_{\nu, i} - \langle f_{\nu, i} \rangle_{i}) \cdot \langle F_{\nu, i} \rangle_{\nu} $$
 	Each channel's behavior is now quantified by its mean deviation from the daily average as well as the spread of these deviations, given by their variance across each channel.
-	During this examination, it was noted that the channels had a tendency to vary together; they often would pivot around the 31.188 GHz measurement, which remained stable to within $0.5$\% of the measurement value.
+	During this examination, it was noted that the channels had a tendency to vary together in time; they often would pivot around the 31.188 GHz measurement, which remained stable to within $0.5$\% of the measurement value.
 	The frequencies at either extreme (27.688 GHz and 34.688 GHz) varied by no more than 6\%.
-	It is unclear what causes this linear variation, but it is worth mentioning that even though this estimate aims to describe the uncertainty of these points relative to each other, it is an overestimate.
+	It is unclear what causes this linear variation, but it is worth mentioning that even though this estimate describes the uncertainty of these points relative to each other, it is an overestimate.
 	There remains some unidentifiable cross-channel dependency.
 
 	We introduce a thermal component as well, calculated by fractionalizing each thermal error by its accompanying measurement, averaging across each channel, and denormalizing with the channel average.
@@ -152,12 +150,12 @@ Having a well-calibrated systematically-consistent dataset over this broad bandw
 
 \subsubsection{Synchrotron Correction}
 
-	With the relatively large SZA beam, covering $\theta_{B} \approx 11'$ full width at half maximum, we measure Jupiter's total flux density; this comprises both thermal and nonthermal components.
-	In this frequency regime, synchrotron radiation dominates the nonthermal emission.
+	The relatively large SZA beam ($\theta_{B} \approx 11'$ full width at half max) contains flux from both thermal and non-thermal components.
+	In this frequency regime, synchrotron radiation dominates the non-thermal emission.
 	Since we are interested only in the thermal component, we must subtract out the synchrotron radiation from the total observed flux density.
 
 	Jupiter's dynamic synchrotron spectrum has been a subject of discussion since the 1970s when a series of observations suggested time variability in the low-frequency\footnote{Klein 1976 uses 11-13 cm and 21 cm, considerably longer wavelengths than our 1 cm.} spectrum (Klein 1976).
-	A survey of that spectrum from 74 MHz up to 8 GHz, described in de Pater et al. 2003, suggests that synchrotron contribution to the planet's radio spectrum drops off above 2 GHz, so we believe that, with frequencies around 30 GHz, our measurements are fairly safe from significant synchrotron-induced variability.
+	A survey of that spectrum from 74 MHz up to 8 GHz, described in de Pater et al. 2003, suggests that synchrotron contribution to the planet's radio spectrum drops off above 2 GHz, so we believe that, with frequencies around 30 GHz, our measurements contain negligible synchrotron-induced variability.
 	Additionally, Klein 1976 observes that fluctuations on the order of days did not exceed 10\%, and explores several-year variability with 1-3 month averages, implying that our 5-month average should capture an approximately constant period of synchrotron variability.
 	Under this assumption, we use a simplified and time-independent model of synchrotron contribution to recover the thermal spectrum.
 	The correction is purely arithmetic and thus does not propagate into uncertainties.
@@ -165,7 +163,7 @@ Having a well-calibrated systematically-consistent dataset over this broad bandw
 	JG uses a value of 1.5 Jy for the synchrotron contribution to a 28.5 GHz measurement of the thermal spectrum, which has a value of about 145 Jy, based on work done by de Pater and Dunn 2003.
 	In order to adjust extant data in the same frequency regime, JG adopts a relationship of $F_{\nu,\,synch} \sim \nu^{-0.4}$, leading to the local model
 	$$F_{\nu,\,synch} =  (1.5 \ Jy)\Bigg(\frac{\nu}{28.5 \ GHz}\Bigg)^{-0.4}$$
-	We find this model acceptable across our small frequency domain, especially considering the comparability of the synchrotron contribution to the uncertainty estimates for these data.
+	which we apply across our small frequency domain.
 
 	The synchrotron model is subtracted from the time-averaged flux density at each channel, yielding thermal-only flux density measurements:
 	$$F_{\nu,\,thermal} = F_{\nu,\,meas} - F_{\nu,\,synch}$$
@@ -213,9 +211,7 @@ Having a well-calibrated systematically-consistent dataset over this broad bandw
 
 
 \subsection{Jackknife Testing} \label{s:jackknife}
-
-	Data are presumably fully processed at this point.
-	In order to ensure that no further identifiable systematics are present, we engage in some brief jackknife tests during which we run arbitrarily selected halves of the time-series data through the analysis pipeline and observe the average resulting change in brightness temperatures.
+In order to investigate whether identifiable systematics are present, we conducted a set of jackknife tests during which we run arbitrarily selected halves of the time-series data through the analysis pipeline and observe the average resulting change in brightness temperatures.
 	The data are halved both on meaningless criteria, such as odd/even index, as well as by criteria with more systematic potential, such as Jupiter's horizontal elevation at the time of observation.
 
 	It was mentioned earlier that what may be an airmass calibration error in the raw data was detected by one of these jackknife tests, specifically one using Jupiter's elevation.
