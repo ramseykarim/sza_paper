@@ -73,14 +73,14 @@
 	This step facilitates examination of antenna gain error, indicated by the variance in the normalized points as well as the cross-channel behavior during individual observations.
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{final_raw.png}
+		\includegraphics[width=\textwidth]{final_raw.pdf}
 		\caption{\label{fig:raw}Flux density measurements by time, before and after distance adjustment.}
 	\end{figure}
 	Jackknife testing, discussed in more detail in Section \ref{s:jackknife}, reveals an additional artifact at this stage.
 	The series of flux densities for each channel show a positive linear correlation with Jupiter's elevation in the sky at the time of observation, indicating some potential issue with airmass calibration in the original measurements.
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{final_airmass.png}
+		\includegraphics[width=\textwidth]{final_airmass.pdf}
 		\caption{\label{fig:air}Indication of linear dependence of flux on elevation, and more importantly, linear dependence of flux-elevation slope on frequency.}
 	\end{figure}
 	The slopes of each channel's flux density are positive and linear with frequency, and therefore relatively easy to correct for, as demonstrated in Figure \ref{fig:air}; we assumed in this process that the measurements taken at higher elevations through thinner layers of atmosphere are more accurate.
@@ -250,7 +250,7 @@ In order to investigate whether identifiable systematics are present, we conduct
 
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{final_tp_const.png}
+		\includegraphics[width=\textwidth]{final_tp_const.pdf}
 		\caption{\label{fig:tp}a) The temperature-pressure profile (blue curve) used in our model of Jupiter's atmosphere. Several weighting functions are overlaid on the right edge of this figure. b) The fractional NH$_{3}$ abundances according to the solar (yellow) and nominal (blue) constituent abundance models plotted next to our best-fit model (red dashed line). The thinner black lines indicate global high- and low-abundance limits using the error bounds for each parameter in the 3-parameter grid fit. The lower bound to the NH$_{3}$ abundance near the tropopause is not certain; this plot uses the small value resulting from the Clausius-Clapeyron equation of state. Cloud levels are overlaid on the left hand side of this panel.}
 	\end{figure}
 
@@ -298,13 +298,13 @@ In order to investigate whether identifiable systematics are present, we conduct
 
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{final_models_wl.png}
+		\includegraphics[width=\textwidth]{final_models_wl.pdf}
 		\caption{\label{fig:emission_wl}CARMA measurements of disk-averaged brightness temperature together with extant measurements (\citealt{1978Icar...35...44K}, \citealt{2011ApJS..192...19W}, \citealt{2005Icar..173..439G}, \citealt{2016AGUFM.P31D..08D}). Nominal model is included, as well as the model we suggest in this work, using parameters discussed in Section \ref{s:results}, and the global high- and low-abundance limits. The lower limit for high altitude atmospheric abundance is, as discussed in the text, not stated in this work. CARMA measurements are shown with a relative certainty at the capped error bars and absolute uncertainty at the larger, uncapped bars. Note the uniformity in absolute certainty and the frequency-dependent variation in relative uncertainty.}
 	\end{figure}
 
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{final_models_freq.png}
+		\includegraphics[width=\textwidth]{final_models_freq.pdf}
 		\caption{\label{fig:emission_freq}Similar to Figure \ref{fig:emission_freq}, but restricted to a smaller spectral range and set against a frequency axis. Inset panel provides a clearer view of the CARMA points reduced in this work. We include two additional models, indicated by cyan lines, representing one-parameter deviations from the nominal model; in other words, we hold two parameters at 100\% of the nominal value and let the third take on the preferred value based on the $\chi^{2}$ fit so as to demonstrate the effects of the parameters as well as their general independence to each other. The effects of relative humidity and deep atmosphere abundance are shown by the two cyan lines. High altitude atmosphere abundance is not shown here, but when decreased raises the brightness temperature at the band center and accounts for the band center difference between the relative-humidity-only and preferred (red-dashed) models.}
 	\end{figure}
 
