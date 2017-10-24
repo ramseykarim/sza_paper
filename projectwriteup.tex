@@ -39,13 +39,12 @@
 
 	Modern efforts to uncover more about the planet's vertical structure have also raised new questions \citep{2005Icar..173..425D}.
 	The Galileo probe mission of the 1990s presented {\sl in situ} measurements of the NH$_{3}$ abundance that arguably conflict with models derived from ground-based observations, creating what was described in that paper as the ``Galileo's Ground-based Microwave Paradox.''
-	Probe measurements suggest that NH$_{3}$ abundance should be nearly 4$\times$ solar
-		\footnote{We designate a solar model based on the most recent proto-solar elemental abundance estimates (\citealt{2009ARA&A..47..481A}). N/H2 is taken to be $1.48 \e{-4}$. Henceforth, the solar NH$_{3}$ abundance value is $1.28 \e{-4}$.}. 
+	Probe measurements suggest that NH$_{3}$ abundance should be nearly 4$\times$ solar\footnote{We designate a solar model based on the most recent proto-solar elemental abundance estimates (\citealt{2009ARA&A..47..481A}). N/H2 is taken to be $1.48 \e{-4}$. Henceforth, the solar NH$_{3}$ abundance value is $1.28 \e{-4}$.}. 
 	Given the previously accepted model, this result was jarring to our understanding of the atmosphere's structure and dynamics.  To improve this understanding additional datasets are needed along with updated modeling using the latest measurements of the microwave properties of, primarily, ammonia gas.
 
 	This work presents new ground-based observations over a very wide bandwidth with an interferometer that does not resolve the planet so that more accurate disk-averaged brightness temperatures may be determined.  It also provides a single systematically-consistent dataset over its band (27-35 GHz) that may be used in conjunction with the many decades of observations of our largest planet ({\em e.g.} \citealt{1978Icar...35...44K}, \citealt{2003ApJS..148...39P}, \citealt{2011ApJS..192...19W}, \citealt{2005Icar..173..439G}, \citealt{2016Sci...352.1198D}).
 	Having a well-calibrated systematically-consistent dataset over this broad bandwidth complements the single absolutely calibrated point at near 28.5 GHz in \citealt{2005Icar..173..439G} (hereafter JG).
-	 In addition to presenting his own absolutely calibrated datapoint, JG corrects and discusses the 20-24 GHz from \citealt{1978Icar...35...44K}, and the 22-94 GHz observations obtained with the Wilkinson Microwave Anisotropy Probe satellite (WMAP) (\citealt{2003ApJS..148...39P}; updated in \citealt{2011ApJS..192...19W}); they conclude that NH$_{3}$ is globally subsolar between $0.6 < P < 2$ bar and subsaturated by more than 50\% between $0.4 < P < 0.6$ bar.
+	 In addition to presenting his own absolutely calibrated datapoint, JG corrects and discusses the 20-24 GHz observations from \citealt{1978Icar...35...44K}, and the 22-94 GHz observations obtained with the Wilkinson Microwave Anisotropy Probe satellite (WMAP) (\citealt{2003ApJS..148...39P}; updated in \citealt{2011ApJS..192...19W}); they conclude that NH$_{3}$ is globally subsolar between $0.6 < P < 2$ bar and subsaturated by more than 50\% between $0.4 < P < 0.6$ bar.
 	 
 	Based on these measurements we fine-tune the model presented in \citealt{2001Icar..149...66D} and extended in \citealt{2016Sci...352.1198D}. Based on Galileo measurements, this model assumes the NH$_{3}$ abundance to be $4.5 \times$ solar ($5.72 \e{-4}$) in the deep (P $>$ 8 bar)atmosphere and then follows the saturated vapor curve within and above the cloud layers.
 	This model, described in more detail in Section \ref{s:model}, is henceforth referred to as the ``nominal'' model and serves as the base model for this work.
@@ -63,7 +62,7 @@
 	The calibration data from COPSS comprise flux densities spanning 15 channels from 27-35 GHz (0.8 to 1.1 cm) and 100 days between December 2014 and April 2015.
 	Error estimates accompanying the data have typical values of $\sim0.01$ Jy and account only for thermal error.
 	Uncertainty in the absolute flux calibration is preliminarily estimated at $<5\%$ according to COPSS, but we present our own thorough investigation in Section \ref{s:error}.
-	CARMA in its entirety is a fairly spectrally stable instrument, so we expect relative uncertainty to be somewhat smaller than absolute uncertainty (sec. which section?).
+	CARMA in its entirety is a fairly spectrally stable instrument, so we expect relative uncertainty to be somewhat smaller than absolute uncertainty.
 
 \subsection{Determination of Jupiter's Flux Densities} \label{}
 	Reduction of these data converts a time series of flux densities to a single brightness temperature on channel-by-channel basis.
@@ -107,7 +106,7 @@
 	$\sigma_{A}$, by contrast, serves as a more conventional uncertainty estimate.
 
 	We approach the absolute uncertainty $\sigma_{A}$ estimate using statistical properties of the flux density ensemble along with their stated thermal errors.  The absolute uncertainty is the quadrature  sum of the weighted average of the individual data and the thermal noise of each measurement and may be written
-	$$\sigma_{A}(\hat{\sigma}, \hat{n}) = \hat{\sigma}^{2} + \hat{n}^{2}$$
+	$$\sigma_{A}^{2}(\hat{\sigma}, \hat{n}) = \hat{\sigma}^{2} + \hat{n}^{2}$$
 The first term is 
 		$$\hat{\sigma}^{2} = \frac{\sum_{i} w_{i} \big( F_{\nu,i} - \langle F_{\nu} \rangle \big)^{2} }{\sum_{i} w_{i}}$$
 	The second term, the thermal contribution $\hat{n}$, is calculated as the reciprocal sum of thermal uncertainties for a given channel.
@@ -118,8 +117,8 @@ The first term is
 
 	Relative uncertainty $\sigma_{R}$ comprises both thermal contribution as well as the tendency of each channel to deviate from the others.
 	A perfectly stable instrument should exhibit a consistent cross-channel response to small, day-to-day variation in observed flux; unexpected behavior should be reflected in $\sigma_{R}$.
-	We compare observations across channels by normalizing each channel with its average.\footnote{Until now, all averages have been across time, isolated to each channel.
-	In this section, that will no longer be the case, so averages will be marked as either channel averages ($\nu$) summed across all observations as before, or ``daily'' averages ($i$) calculated with sums across all channels, isolated to each observation.}
+	We compare observations across channels by normalizing each channel with its average\footnote{Until now, all averages have been across time, isolated to each channel.
+	In this section, that will no longer be the case, so averages will be marked as either channel averages ($\nu$) summed across all observations as before, or ``daily'' averages ($i$) calculated with sums across all channels, isolated to each observation.}.
 	The normalized measurements are denoted $f_{\nu, i}$.
 	$$ f_{\nu, i} = \frac{F_{\nu, i}}{\langle F_{\nu, i} \rangle_{\nu}} $$
 	This fraction is averaged across each observation to find the daily mean deviation from each channel's respective average.
@@ -225,17 +224,17 @@ In order to investigate whether identifiable systematics are present, we conduct
 	At higher altitudes, NH$_{3}$ will be partially dissolved in the water cloud ($\sim 6$ bar), will form the NH$_{4}$SH cloud ($\sim 2.5$ bar), and at $P < \sim 0.8$ bar will condense into its own ice cloud and follow the saturated vapor curve.
 	In our nominal model we thus assume an NH$_{3}$ abundance of $5.72 \e{-4}$ in Jupiter's deep atmosphere, which is diminished at altitudes at which clouds form.
 	We adopt a 100\% humidity within and above the NH$_{3}$ ice cloud in our nominal model.
-	This results in a constant abundance of $1.20\e{-7}$ near and above the tropopause.
+	This results in a constant abundance of $1.20\e{-7}$ near and above the tropopause. This NH$_{3}$ profile is shown by the blue curve in Figure \ref{fig:tp}b, and the resulting spectrum is shown by the blue curves in Figures \ref{fig:emission_wl} and \ref{fig:emission_freq}. 
 
 \subsection{Model Generation Through Perturbation}
 
-	Starting with the nominal NH$_{3}$ abundance profile described above, and shown by the blue curve in Figure \ref{fig:tp}b, we apply to it small, unity-order adjustments, which in turn gives us the ability to generate a range of theoretical spectra.
+	Starting with the nominal NH$_{3}$ abundance profile described above, we apply to it small, unity-order adjustments, which in turn gives us the ability to generate a range of theoretical spectra.
 	These spectra are compared to the available measurements in order to isolate a NH$_{3}$ abundance profile in maximal agreement with observations.
 	The spectra are generated using the radiative transfer software, pyplanet, described in \citealt{2014Icar..237..211D} for its use on Neptune's atmosphere. The software ignores potential opacities from clouds.
 
 	We begin this process by separating the atmosphere into regions of altitude based on their radiative contribution to our measurements, according to the nominal NH$_{3}$ abundance model.
 	These contribution functions, shown in Figure \ref{fig:tp}a, are most prevalent between $0.5 < P < 0.8$ bar.
-	This layer coincides with the NH$_{3}$ ice cloud-forming region, over which altitude range NH$_{3}$ follows the saturated vapor curve, as indicated by the nominal abundance profile shown by the blue curve in Figure \ref{fig:tp}b.
+	This layer coincides with the NH$_{3}$ ice cloud-forming region, over which altitude range NH$_{3}$ follows the saturated vapor curve, as indicated by the nominal abundance profile (blue curve in Figure \ref{fig:tp}b).
 	We apply to this region, defined by its plummeting NH$_{3}$ abundance, a constant humidity multiplier $RH$.
 	Through this parameter, we will tune humidity in the NH$_{3}$ cloud-forming region to fit observations.
 
@@ -258,8 +257,8 @@ In order to investigate whether identifiable systematics are present, we conduct
 
 \section{Results} \label{s:results}
 
-	Our 15 SZA measurements of Jupiter's atmospheric emission show a smoothly sloped curve on the short-wavelength side of the 1.3 cm NH$_{3}$ absorption band.
-	We compare our data with the surrounding WMAP and Klein \& Gulkis datasets, as adjusted in JG, as well as Gibson's original point at 28.5 GHz. The SZA observations are consistent to well within 1\% with points from these existing measurements that fall between 27-35 GHz. In the 2-6 cm range we use VLA measurements from \citealt{2016Sci...352.1198D}, after the original data were recalibrated (\citealt{2016AGUFM.P31D..08D}).
+	Our 15 CARMA measurements of Jupiter's atmospheric emission show a smoothly sloped curve on the short-wavelength side of the 1.3 cm NH$_{3}$ absorption band.
+	We compare our data with the surrounding WMAP and Klein \& Gulkis datasets, as adjusted in JG, as well as Gibson's original point at 28.5 GHz. The CARMA observations are consistent to well within 1\% with points from these existing measurements that fall between 27-35 GHz. In the 2-6 cm range we use VLA measurements from \citealt{2016Sci...352.1198D}, after the original data were recalibrated (\citealt{2016AGUFM.P31D..08D}).
 	
 
 	We implement the model-measurement comparison scheme discussed in the previous section and generate a grid of model spectra and corresponding $\chi^{2}$ comparison results.
@@ -268,17 +267,19 @@ In order to investigate whether identifiable systematics are present, we conduct
 
 	We examine the NH$_{3}$ abundance below the cloud-forming region relative to the nominal abundance value of $5.72\e{-4}$, and find 
 	a value of $2.40\e{-4}$, with uncertainty bounding it between $[2.26, 2.57] \e{-4}$.
-	This value produces a spectrum that agrees well with all observations, especially the high frequency WMAP and lower frequency VLA points, both sensitive to the deeper atmosphere.
+	Figure \ref{fig:emission_freq} demonstrates the individual contribution of $\alpha_{d}$ (dashed cyan line) to the final model (red line).
+	This contribution dominates far from the band center, where it fits especially well to the high frequency WMAP and lower frequency VLA points, both sensitive to the deeper atmosphere.
+
 
 \subsection{Relative Humidity $RH$}
 
 	Humidity is examined relative to the saturation curve region in the nominal model, roughly between $0.3 < P < 0.8$ bar.
 	The nominal model follows 100\% humidity, so our results will be considered relative to a fully saturated model.
 	Best-fit results suggest a humidity of $56.5\%$, bounded between $[50.0\%, 63.5\%]$.
-	This humidity adjustment produces spectra that are consistent with all observations, especially the lower frequency CARMA points and the Gibson point that are most sensitive to this pressure range.
+	The dotted cyan line in Figure \ref{fig:emission_freq} shows the individual contribution of $RH$, which dominates closer to the band center and produces model spectra that are consistent with the lower frequency CARMA points and the Gibson point that are most sensitive to this pressure range.
 
 	JG states that the NH$_{3}$ abundance is, on average, sub-saturated by at least a factor of 2 at $P < 0.6$ bar.
-	Our results corroborate this sub-saturation, within our own pressure regime stated above, down to the factor of 2, but add a tighter bound based on 4 independent sets of measurements.
+	Our results corroborate this  factor-of-2 sub-saturation  within our own pressure regime stated above, but add a tighter bound based on 4 independent sets of measurements.
 
 
 \subsection{High Altitude Atmosphere Abundance $\alpha_{h}$}
@@ -288,9 +289,12 @@ In order to investigate whether identifiable systematics are present, we conduct
 	Since we are not very sensitive to these pressures, we are not able to provide a lower bound.
 
 	This result relies primarily on the lowest frequency WMAP measurement but has some input from the lower frequency CARMA measurements.
-	It is difficult to place any reasonable bound on the high altitude atmosphere abundance due to the lack of data near the band center; the Klein \& Gulkis measurements were deemed too uncertain for our comparison, but all tend toward brightness temperatures higher than the WMAP point.
+	It is difficult to place any reasonable bound on the high altitude atmosphere abundance due to the lack of data near the band center; the Klein \& Gulkis measurements were deemed too uncertain for our comparison, but tend toward temperatures higher than the WMAP point.
 	Higher brightness temperatures at the band center would indicate a lower pressure departure from the saturation curve and consequently a smaller high altitude atmosphere abundance.
 	The precise number found in our analysis is likely meaningless -- nevertheless, it is quite possible that the high atmosphere abundance should be smaller than its value in the nominal model.
+	
+	Our final model is shown by the red dashed lines in Figures \ref{fig:emission_wl} and \ref{fig:emission_freq}, with upper and lower bounds.
+	In Figure \ref{fig:emission_freq}, as mentioned above, we also show the spectra resulting from $\alpha_{d}$ and $RH$ only (cyan dashed and dotted lines, resp.).
 
 	\begin{figure}
 		\centering
