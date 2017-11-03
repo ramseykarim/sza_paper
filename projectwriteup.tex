@@ -13,7 +13,7 @@
 
 \title{A Wideband Self-Consistent Disk-Averaged Spectrum of Jupiter Near 30 GHz and Its Implications for NH$_{3}$ Saturation in the Upper Troposphere}
 \date{\today}
-\author{Ramsey Karim, David DeBoer, Imke de Pater, Garrett Keating}
+\author{Ramsey Karim, David DeBoer, Imke de Pater, Garrett K. Keating}
 
 \begin{document}
 
@@ -39,10 +39,11 @@
 
 	Modern efforts to uncover more about the planet's vertical structure have also raised new questions \citep{2005Icar..173..425D}.
 	The Galileo probe mission of the 1990s presented {\sl in situ} measurements of the NH$_{3}$ abundance that arguably conflict with models derived from ground-based observations, creating what was described in that paper as the ``Galileo's Ground-based Microwave Paradox.''
-	Probe measurements suggest that NH$_{3}$ abundance should be nearly 4$\times$ solar\footnote{We designate a solar model based on the most recent proto-solar elemental abundance estimates (\citealt{2009ARA&A..47..481A}). N/H2 is taken to be $1.48 \e{-4}$. Henceforth, the solar NH$_{3}$ abundance value is $1.28 \e{-4}$.}. 
+	Probe measurements suggest that NH$_{3}$ abundance should be nearly 4$\times$ solar\footnote{We designate a solar model based on the most recent proto-solar elemental abundance estimates (\citealt{2009ARA&A..47..481A}). N/H2 is taken to be $1.48 \e{-4}$. Henceforth, the solar NH$_{3}$ abundance value (or volume mixing ratio) in Jupiter is $1.28 \e{-4}$.}. 
 	Given the previously accepted model, this result was jarring to our understanding of the atmosphere's structure and dynamics.  To improve this understanding additional datasets are needed along with updated modeling using the latest measurements of the microwave properties of, primarily, ammonia gas.
 
-	This work presents new ground-based observations over a very wide bandwidth with an interferometer that does not resolve the planet so that more accurate disk-averaged brightness temperatures may be determined.  It also provides a single systematically-consistent dataset over its band (27-35 GHz) that may be used in conjunction with the many decades of observations of our largest planet ({\em e.g.} \citealt{1978Icar...35...44K}, \citealt{2003ApJS..148...39P}, \citealt{2011ApJS..192...19W}, \citealt{2005Icar..173..439G}, \citealt{2016Sci...352.1198D}).
+	This work presents new ground-based observations made over a very wide bandwidth with the Sunyaev-Zel'dovich Array (SZA), a subset of the CARMA interferometer in an array configuration that does not resolve the planet, so more accurate disk-averaged brightness temperatures may be determined.
+	It also provides a single systematically-consistent dataset over its band (27-35 GHz) that may be used in conjunction with the many decades of observations of our largest planet ({\em e.g.} \citealt{1978Icar...35...44K}, \citealt{2003ApJS..148...39P}, \citealt{2011ApJS..192...19W}, \citealt{2005Icar..173..439G}, \citealt{2016Sci...352.1198D}).
 	Having a well-calibrated systematically-consistent dataset over this broad bandwidth complements the single absolutely calibrated point at near 28.5 GHz in \citealt{2005Icar..173..439G} (hereafter JG).
 	 In addition to presenting his own absolutely calibrated datapoint, JG corrects and discusses the 20-24 GHz observations from \citealt{1978Icar...35...44K}, and the 22-94 GHz observations obtained with the Wilkinson Microwave Anisotropy Probe satellite (WMAP) (\citealt{2003ApJS..148...39P}; updated in \citealt{2011ApJS..192...19W}); they conclude that NH$_{3}$ is globally subsolar between $0.6 < P < 2$ bar and subsaturated by more than 50\% between $0.4 < P < 0.6$ bar.
 	 
@@ -52,15 +53,15 @@
 
 
 \section{Data} \label{s:data}
-	One of the last studies conducted with the Combined Array for Research in Millimeter-wave Astronomy (CARMA) was a CO power spectrum survey which aimed to measure the CO(1-0) transition in redshift $\sim 3$ galaxies (\citealt{2015ApJ...814..140K}; \citealt{2016ApJ...830...34K}, hereafter referred to as COPSS).
-	The compact, 8-element Sunyaev-Zel'dovich Array (SZA) subset of CARMA was used to take various field scans between 27-35 GHz to measure the redshifted $\lambda_{0} = 115$ GHz line.
+	One of the last studies conducted with CARMA was a CO power spectrum survey which aimed to measure the CO(1-0) transition in redshift $\sim 3$ galaxies (\citealt{2015ApJ...814..140K}; \citealt{2016ApJ...830...34K}, hereafter referred to as COPSS).
+	The compact, 8-element Sunyaev-Zel'dovich Array (SZA) subset of CARMA was used to take various field scans between 27-35 GHz to measure the redshifted CO(1-0) $\nu_{0} = 115$ GHz line.
 	COPSS used Mars as the primary calibrator, and Jupiter as the secondary calibrator.
 	It is these Jupiter observations, taken between December 2014 and the array's decommission in April 2015, that are used in this work.
 
 	The SZA is a set of eight 3.5-m elements sensitive to left circularly polarized radiation in a compact array (\citealt{2015ApJ...814..140K}).
 	Since it does not resolve the planet, the array is well-suited for accurate measurements of Jupiter's total flux density.
 	The calibration data from COPSS comprise flux densities spanning 15 channels from 27-35 GHz (0.8 to 1.1 cm) and 100 days between December 2014 and April 2015.
-	Error estimates accompanying the data have typical values of $\sim0.01$ Jy and account only for thermal error.
+	Thermal error estimates are typically of order $0.01$ Jy for a single day's worth of data on Jupiter.
 	Uncertainty in the absolute flux calibration is preliminarily estimated at $<5\%$ according to COPSS, but we present our own thorough investigation in Section \ref{s:error}.
 	CARMA in its entirety is a fairly spectrally stable instrument, so we expect relative uncertainty to be somewhat smaller than absolute uncertainty.
 
@@ -98,7 +99,7 @@
 	We define two distinct error measurements for the data set: absolute uncertainty $\sigma_{A}$ and relative uncertainty $\sigma_{R}$.
 	Absolute uncertainty quantifies our estimate of the overall calibration accuracy of the SZA, estimating how close the data are to the actual values.  This is determined by the systematics of the instrument.
 	%The $\sigma_{A}$ measurement cannot wildly upset the relationship between points within this set; it is primarily a characteristic of the ensemble as a whole.
-	From COPSS, an estimated upper limit of $<5\%$ on this calibration error is quoted.
+	An upper limit of $<5\%$ on this calibration error is quoted in COPSS, which incorporates results from \citealt{2010ApJ...713...82S} in this estimate.
 
 	Relative uncertainty quantifies the stability of each channel with respect to the others, estimating internal consistency rather than absolute accuracy.
 	CARMA has strong spectral stability and can observe this feature in the strongly correlated cross-channel behavior displayed in Figures \ref{fig:raw} and \ref{fig:air}, which suggests that the $\sigma_{R}$ measurement, while allowing some independent uncertainty on points, is expected to be smaller than $\sigma_{A}$ and so will not have as great an effect on the overall position of the ensemble.
@@ -113,7 +114,7 @@ The first term is
 	With $w_{i}$ defined above, $\hat{n}$ is
 	$$ \frac{1}{\hat{n}^{2}} = \sum_{i} w_{i} $$
 	In this way, we merge statistical 1-sigma error on a channel's flux ensemble with the thermal uncertainty of the points themselves and produce the value $\sigma_{A}$, our estimate of uncertainty on the absolute calibration of the instrument.
-	This we find to be closer to $\sim2\%$, which falls under the upper limit stated by COPSS.
+	This we find to be closer to $\sim2\%$, which falls under the upper limit stated in COPSS.
 
 	Relative uncertainty $\sigma_{R}$ comprises both thermal contribution as well as the tendency of each channel to deviate from the others.
 	A perfectly stable instrument should exhibit a consistent cross-channel response to small, day-to-day variation in observed flux; unexpected behavior should be reflected in $\sigma_{R}$.
@@ -204,8 +205,10 @@ The first term is
 
 
 \subsection{Jackknife Testing} \label{s:jackknife}
-In order to investigate whether identifiable systematics are present, we conducted a set of jackknife tests during which we run arbitrarily selected halves of the time-series data through the analysis pipeline and observe the average resulting change in brightness temperatures.
-	The data are halved both on meaningless criteria, such as odd/even index, as well as by criteria with more systematic potential, such as Jupiter's horizontal elevation at the time of observation.
+    In order to investigate whether identifiable systematics are present, we conducted a set of jackknife tests during which we run arbitrarily selected halves of the time-series data through the analysis pipeline and observe the average resulting change in brightness temperatures.
+	The data are halved both on meaningless criteria as well as by criteria with more systematic potential.
+	We applied arbitrary-parameter tests with the data split along odd vs. even index, first vs. second half, and first and last quarters vs. central half.
+	We applied the more meaningful test of sorting along Jupiter's horizontal elevation at the time of observation.
 
 	It was mentioned earlier that what may be an airmass calibration error in the raw data was detected by one of these jackknife tests, specifically one using Jupiter's elevation.
 	After this correction, all subsequent jackknife tests amount to nothing more than noise at less than 2\% variation from the full-range values, indicating that we have identified all major systematics about which we have information.
@@ -257,7 +260,7 @@ In order to investigate whether identifiable systematics are present, we conduct
 
 \section{Results} \label{s:results}
 
-	Our 15 CARMA measurements of Jupiter's atmospheric emission show a smoothly sloped curve on the short-wavelength side of the 1.3 cm NH$_{3}$ absorption band.
+	Our measurements of Jupiter's atmospheric emission show a smoothly sloped curve on the short-wavelength side of the 1.3 cm NH$_{3}$ absorption band.
 	We compare our data with the surrounding WMAP and Klein \& Gulkis datasets, as adjusted in JG, as well as Gibson's original point at 28.5 GHz. The CARMA observations are consistent to well within 1\% with points from these existing measurements that fall between 27-35 GHz. In the 2-6 cm range we use VLA measurements from \citealt{2016Sci...352.1198D}, after the original data were recalibrated (\citealt{2016AGUFM.P31D..08D}).
 	
 
@@ -311,7 +314,7 @@ In order to investigate whether identifiable systematics are present, we conduct
 
 \section{Conclusion}
 
-	We utilized CARMA's COPPS survey (\citealt{2015ApJ...814..140K}; \citealt{2016ApJ...830...34K}) at frequencies between 27-35 GHz to identify and extract observations of Jupiter, used as a secondary calibrator over the course of 5 months. These data were reduced into 15 frequency measurements of Jupiter's disk-averaged thermal brightness temperature, over a relatively unobserved $\sim 10$ GHz wide section of Jupiter's thermal emission profile, just shortwards of the NH$_{3}$ absorption band.
+	We utilized data from the COPPS survey (\citealt{2015ApJ...814..140K}; \citealt{2016ApJ...830...34K}) at frequencies between 27-35 GHz to identify and extract observations of Jupiter, used as a secondary calibrator over the course of 5 months. These data were reduced into 15 frequency measurements of Jupiter's disk-averaged thermal brightness temperature, over a relatively unobserved $\sim 10$ GHz wide section of Jupiter's thermal emission profile, just shortwards of the NH$_{3}$ absorption band.
 	CARMA's strong spectral stability, and hence the observed slope in the spectrum, as well as the high precision in our absolute calibration, were key deriving the disk-averaged NH$_{3}$ profile by fitting the data using our radiative transfer models.
     We find that the NH$_{3}$ abundance below the NH$_{3}$ ice cloud, at $0.8 < P < 8$ bar,  is $2.40\e{-4}$, bounded between $[2.26, 2.57] \e{-4}$.
 	Relative humidity, within the NH$_{3}$ cloud layer where the abundance follows the saturation curve, is found to be $56.5\%$, bounded between $[50\%, 63.5\%]$.
@@ -321,8 +324,11 @@ In order to investigate whether identifiable systematics are present, we conduct
 	This measurement set will be useful in future explorations, as have WMAP, Gibson, and others been in ours. They will, in a sense, extend the Juno data, since they are at shorter wavelengths than the Microwave Radiometer (MWR) experiment on Juno.
 	
 
-	CARMA's calibration is strong enough that we feel these reduced thermal measurements may be useful as calibration information for interferometers lacking short baselines.
+	CARMA's calibration is strong enough that these reduced thermal measurements may be useful as calibration information for interferometers lacking short baselines.
 	The measurements produced in this work are believed to encompass all flux from the disk, so they may be treated as ``single-dish'' flux measurements to give calibration context to interferometer scans.
+	
+	\paragraph{Acknowledgements}
+ We gratefully acknowledge the James S. McDonnell Foundation, the National Science Foundation (NSF) and the University of Chicago for funding to construct the SZA. Partial support was provided by NSF Physics Frontier Center grant PHY-0114422 to the Kavli Institute of Cosmological Physics at the University of Chicago. Support for CARMA construction was derived from the states of California, Illinois, and Maryland, the James S. McDonnell Foundation, the Gordon and Betty Moore Foundation, the Kenneth T. and Eileen L. Norris Foundation, the University of Chicago, the Associates of the California Institute of Technology, and the National Science Foundation (NSF). Support for CARMA operations and analysis was provided in part by the National Science Foundation University Radio Observatories Program, including awards AST-1140019 (to the University of Chicago), AST-1140031 (University of California-Berkeley), AST-1140021 (California Institute of Technology), and by the CARMA partner universities. In addition, partial support to this particular research endeavour was provided by NASA Planetary Astronomy (PAST) Award NNX14AJ43G to the University of California, Berkeley.
 
 
 \nocite{*}
